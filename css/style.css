@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--White);
+    }    
+}
+
+
+:root {
+    --bg-color: #1E2330;
+    --Green: #59D74A;
+    --White: #FFFFFF;
+    --Grey: #2C333D;
+    --p-tag: #838892;
+}
