@@ -39,8 +39,8 @@
                  </ul>
                  <!-- toggle menu -->
                  <div class="flex items-center gap-8 lg:gap-0 text-xl">
-                    <a href="#"><i class="fa-solid fa-moon hidden"></i></a>
-                    <a href="#"><i class="fa-regular fa-sun md:text-2xl md:ml-16"></i></a>
+                    <a href="#" class="hidden" id="white-mode"><i class="fa-solid fa-moon md:text-2xl md:ml-16"></i></a>
+                    <a href="#" id="dark-mode"><i class="fa-regular fa-sun md:text-2xl md:ml-16"></i></a>
                     <a href="#" id="close-icon" class="hidden"><i class="fa-solid fa-xmark text-2xl"></i></a>
                     <a href="#" id="menu-icon" class="md:hidden"><i class="fa-solid fa-bars"></i></a>
                  </div> 
@@ -54,10 +54,12 @@
                  </div>
                 <!-- Hero text -->
                  <div class="lg:w-[60%]">
-                    <h1 class="text-3xl font-bold text-[var(--White)] leading-tight mb-2 lg:text-5xl lg:mb-5">Mamunur Roshid Anas</h1>
-                    <p class="text-lg mb-4 text-[var(--p-tag)] font-semibold lg:text-2xl lg:mb-6">I am a <span id="text-ani">Front-End Developer</span></p>
-                    <p class="text-base text-[var(--p-tag)] mb-3 lg:text-lg lg:mb-6">I’m Mamun, a front-end developer skilled in HTML, CSS, JavaScript, and Tailwind CSS. Passionate about creating modern,
-                    user-friendly websites to enhance digital experiences.</p>
+                        <h1 id="text-h1" class="text-3xl font-bold text-[var(--White)] leading-tight mb-2 lg:text-5xl lg:mb-5">Mamunur Roshid Anas</h1>
+                        <p id="text-p" class="text-lg mb-4 text-[var(--p-tag)] font-semibold lg:text-2xl lg:mb-6">I am a <span id="text-ani"
+                                class="text-[var(--Blue)]">Front-End Developer</span></p>
+                        <p id="text-p1" class="text-base text-[var(--p-tag)] mb-3 lg:text-lg lg:mb-6">I’m Mamun, a front-end developer skilled in HTML, CSS,
+                            JavaScript, and Tailwind CSS. Passionate about creating modern,
+                            user-friendly websites to enhance digital experiences.</p>
                     <!-- button -->
                      <div class="flex items-center gap-4 text-lg mb-7 lg:text-2xl lg:mb-12">
                         <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-linkedin-in p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>

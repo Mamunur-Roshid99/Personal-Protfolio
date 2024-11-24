@@ -18,3 +18,30 @@ function menubarHideShow() {
 }
 
 menubarHideShow();
+
+
+// dark mode section
+function darkMode() {
+    const whiteMode = document.querySelector("#white-mode");
+    const darkMode = document.querySelector("#dark-mode");
+
+    darkMode.addEventListener("click", () => {
+      whiteMode.style.display = "block";
+      darkMode.style.display = "none";
+      document.querySelector("body").classList.add("dark");
+      document.querySelector("#text-h1").classList.add("text-black");
+      document.querySelector("#text-p").classList.add("text-black");
+      document.querySelector("#text-p1").classList.add("text-black");
+    });
+
+    whiteMode.addEventListener("click", () => {
+      whiteMode.style.display = "none";
+      darkMode.style.display = "block";
+      document.querySelector("body").classList.remove("dark");
+      document.querySelector("#text-h1").classList.remove("text-black");
+      document.querySelector("#text-p").classList.remove("text-black");
+      document.querySelector("#text-p1").classList.remove("text-black");
+    });
+}
+
+darkMode();
