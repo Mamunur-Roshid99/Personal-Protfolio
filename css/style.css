@@ -62,7 +62,7 @@
 
 /* text animation starts */
 
-/* #text-ani {
+#text-ani {
     position: absolute;
     margin-left: 5px;
     color: var(--Blue);
@@ -80,10 +80,10 @@
 }
 
  /* cursor blinking */
- /* @keyframes typing {
+ @keyframes typing {
     50% { left: 100%;
            margin: 0 -30px 0 30px;
         }
- } */ 
+ } 
 
 /* text animation ends */
