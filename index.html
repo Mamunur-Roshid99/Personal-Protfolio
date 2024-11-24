@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamunr</title>
+    <title>Mamunur Roshid-Front End Developer</title>
+    <link rel="shortcut icon" type="x-icon" href="images/Mamun2.png" >
     <!-- Custom Css -->
      <link rel="stylesheet" href="css/style.css">
     <!-- tailwind css cdn -->
@@ -17,5 +18,52 @@
 </head>
 <body>
 
+    <!-- Header Section Starts -->
+
+    <header class="my-0 mx-auto w-[90%] lg:w-[1024px]">
+        <div class="container">
+
+            <!-- Navbar part -->
+             <nav class="relative flex items-center justify-between py-4">
+                <!-- nav logo -->
+                 <a href="#">
+                    <h1 class="text-2xl font-bold tracking-wider md:text-3xl">Mamun.</h1>
+                 </a>
+                 <!-- nav menu -->
+                 <ul id="menu-link" class="opacity-0 absolute top-14 text-center flex flex-col gap-6 py-4 bg-[var(--bg-color)] w-full font-medium md:opacity-[1] md:relative md:top-0 md:flex-row md:bg-transparent md:w-44 lg:w-0 md:text-lg lg:gap-8">
+                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Home</a></li>
+                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">About</a></li>
+                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Services</a></li>
+                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Portfolio</a></li>
+                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Contact</a></li>
+                 </ul>
+                 <!-- toggle menu -->
+                 <div class="flex items-center gap-3 text-xl">
+                    <a href="#"><i class="fa-solid fa-moon hidden"></i></a>
+                    <a href="#"><i class="fa-regular fa-sun md:text-2xl md:ml-16"></i></a>
+                    <a href="#" id="close-icon" class="hidden"><i class="fa-solid fa-xmark text-2xl"></i></a>
+                    <a href="#" id="menu-icon" class="md:hidden"><i class="fa-solid fa-bars"></i></a>
+                 </div> 
+             </nav>
+
+            <!--Hero Section  -->
+            <main class="bg-red-700">
+                <!-- Hero IMg -->
+                 <div>
+                    <img src="images/Mamun.png">
+                 </div>
+                <!-- Hero Img -->
+                 <div>
+                    <h1>Mamunur Roshid Anas</h1>
+                 </div>
+            </main>
+
+        </div>
+    </header>
+
+    <!-- Header Section Ends -->
+
+
+    <script src="js/script.js"></script>
 </body>
 </html>
