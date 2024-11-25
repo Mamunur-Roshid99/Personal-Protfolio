@@ -32,6 +32,7 @@ function darkMode() {
       document.querySelector("#text-h1").classList.add("text-black");
       document.querySelector("#text-p").classList.add("text-black");
       document.querySelector("#text-p1").classList.add("text-black");
+      document.querySelector("#about-text").classList.add("text-black");
     });
 
     whiteMode.addEventListener("click", () => {
@@ -41,6 +42,7 @@ function darkMode() {
       document.querySelector("#text-h1").classList.remove("text-black");
       document.querySelector("#text-p").classList.remove("text-black");
       document.querySelector("#text-p1").classList.remove("text-black");
+      document.querySelector("#about-text").classList.remove("text-black");
     });
 }
 

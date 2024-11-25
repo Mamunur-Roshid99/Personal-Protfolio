@@ -20,31 +20,37 @@
 
     <!-- Header Section Starts -->
 
-    <header class="my-0 mx-auto w-[90%] lg:w-[1024px]">
+    <header class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-24 lg:mb-32">
         <div class="container">
 
             <!-- Navbar part -->
-             <nav class="relative flex items-center justify-between py-4">
-                <!-- nav logo -->
-                 <a href="#">
-                    <h1 class="text-2xl font-bold tracking-wider md:text-3xl text-[var(--Blue)]">Mamun.</h1>
-                 </a>
-                 <!-- nav menu -->
-                 <ul id="menu-link" class="opacity-0 absolute top-14 text-center flex flex-col gap-6 py-4 bg-[var(--bg-color)] w-full font-medium md:opacity-[1] md:relative md:top-0 md:flex-row md:bg-transparent md:w-44 lg:w-0 md:text-base lg:gap-8 uppercase">
-                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Home</a></li>
-                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">About</a></li>
-                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Skills</a></li>
-                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Projects</a></li>
-                     <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Contact</a></li>
-                 </ul>
-                 <!-- toggle menu -->
-                 <div class="flex items-center gap-8 lg:gap-0 text-xl">
-                    <a href="#" class="hidden" id="white-mode"><i class="fa-solid fa-moon md:text-2xl md:ml-16"></i></a>
-                    <a href="#" id="dark-mode"><i class="fa-regular fa-sun md:text-2xl md:ml-16"></i></a>
-                    <a href="#" id="close-icon" class="hidden"><i class="fa-solid fa-xmark text-2xl"></i></a>
-                    <a href="#" id="menu-icon" class="md:hidden"><i class="fa-solid fa-bars"></i></a>
-                 </div> 
-             </nav>
+                <nav class=" relative flex items-center justify-between py-4">
+                    <!-- nav logo -->
+                    <a href="#">
+                        <h1 class="text-2xl font-bold tracking-wider md:text-3xl text-[var(--Blue)]">Mamun.</h1>
+                    </a>
+                    <!-- nav menu -->
+                    <ul id="menu-link"
+                        class="opacity-0 absolute top-14 text-center flex flex-col gap-6 py-4 bg-[var(--bg-color)] w-full font-medium md:opacity-[1] md:relative md:top-0 md:flex-row md:bg-transparent md:w-44 lg:w-0 md:text-base lg:gap-8 uppercase">
+                        <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Home</a>
+                        </li>
+                        <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">About</a>
+                        </li>
+                        <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Skills</a>
+                        </li>
+                        <li><a href="#"
+                                class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Projects</a></li>
+                        <li><a href="#"
+                                class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Contact</a></li>
+                    </ul>
+                    <!-- toggle menu -->
+                    <div class="flex items-center gap-8 lg:gap-0 text-xl">
+                        <a href="#" class="hidden" id="white-mode"><i class="fa-solid fa-moon md:text-2xl md:ml-16"></i></a>
+                        <a href="#" id="dark-mode"><i class="fa-regular fa-sun md:text-2xl md:ml-16"></i></a>
+                        <a href="#" id="close-icon" class="hidden"><i class="fa-solid fa-xmark text-2xl"></i></a>
+                        <a href="#" id="menu-icon" class="md:hidden"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                </nav>
 
             <!--Hero Section  -->
             <main class="mt-5 flex flex-col items-center lg:flex-row lg:gap-44 lg:mt-20 lg:items-start">
@@ -79,6 +85,36 @@
     </header>
 
     <!-- Header Section Ends -->
+
+    <!-- About Section Starts -->
+
+    <section id="about" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-16 lg:mb-20">
+        <div class="container">
+
+            <h1 class="text-center font-bold text-3xl leading-tight mb-10 lg:mb-24 lg:text-5xl">About <span class="text-[var(--Blue)]">Me</span></h1>
+            
+            <div class="flex flex-col space-y-8 items-center lg:flex-row lg:space-y-0 lg:gap-36">
+            
+                <!-- image part -->
+                <div class="w-[300px] border-2 border-[var(--Blue)] shadow-[var(--Blue)] shadow-md pt-14 mb-5 rounded-2xl lg:w-[40%]">
+                    <img src="images/Mamun.png">
+                </div>
+                <!--text part  -->
+                <div class="lg:w-[60%]">
+                    <p id="about-text" class="text-base text-[var(--p-tag)] mb-12 lg:text-lg">👋 Hi, I'm <b>Mamunur Roshid Anas</b>, an 18-year-old front-end developer passionate about creating modern and user-friendly websites with
+                    HTML, CSS, JavaScript, and TailwindCSS. While I’m still growing in the tech world, my dedication to innovation and
+                    commitment to quality set me apart. Let’s bring your ideas to life through exceptional digital experiences! </p>
+                    <a href="#" id="btn" target="_blank"
+                        class="px-6 py-3 rounded-lg font-semibold border-2 border-[var(--Blue)] tracking-wider">Contact Me</a>
+                </div>
+            
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section Ends -->
+
 
 
     <script src="js/script.js"></script>
