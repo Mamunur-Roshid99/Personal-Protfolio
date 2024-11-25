@@ -33,6 +33,10 @@ function darkMode() {
       document.querySelector("#text-p").classList.add("text-black");
       document.querySelector("#text-p1").classList.add("text-black");
       document.querySelector("#about-text").classList.add("text-black");
+      document.querySelector("#skip").classList.add("skill");
+      document.querySelector("#skip1").classList.add("skill");
+      document.querySelector("#skip2").classList.add("skill");
+      document.querySelector("#skip3").classList.add("skill");
     });
 
     whiteMode.addEventListener("click", () => {
@@ -43,6 +47,10 @@ function darkMode() {
       document.querySelector("#text-p").classList.remove("text-black");
       document.querySelector("#text-p1").classList.remove("text-black");
       document.querySelector("#about-text").classList.remove("text-black");
+      document.querySelector("#skip").classList.remove("skill");
+      document.querySelector("#skip1").classList.remove("skill");
+      document.querySelector("#skip2").classList.remove("skill");
+      document.querySelector("#skip3").classList.remove("skill");
     });
 }
 

@@ -25,6 +25,10 @@
     color: black;
 }
 
+.skill {
+    color: white;
+}
+
 :root {
     --bg-color: #171F2B;
     --Blue: #00D7FF;
