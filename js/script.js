@@ -4,11 +4,11 @@ function menubarHideShow() {
     const menuLink = document.querySelector("#menu-link");
     const closeIcon = document.querySelector("#close-icon");
 
-    menuLink.addEventListener("click", ()=> {
-      menuLink.style.opacity = "0";
-      menuIcon.style.display = "block";
-      closeIcon.style.display = "none";
-    })
+    // menuLink.addEventListener("click", ()=> {
+    //   menuLink.style.opacity = "0";
+    //   menuIcon.style.display = "block";
+    //   closeIcon.style.display = "none";
+    // })
 
     menuIcon.addEventListener("click", () => {
       menuLink.style.opacity = "1";

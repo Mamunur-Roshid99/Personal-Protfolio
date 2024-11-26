@@ -42,9 +42,9 @@
                         </li>
                         <li><a href="#skill" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Skills</a>
                         </li>
-                        <li><a href="#"
+                        <li><a href="#project"
                                 class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Projects</a></li>
-                        <li><a href="#"
+                        <li><a href="#contact"
                                 class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Contact</a></li>
                     </ul>
                     <!-- toggle menu -->
@@ -153,6 +153,7 @@
     <!-- Skills Section Ends -->
 
     <!-- Project Section Starts -->
+
      <section id="project" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-24 lg:mb-32">
 
          <div class="container">
@@ -287,7 +288,77 @@
          </div>
 
      </section>
+
     <!-- Project Section Ends -->
+
+    <!-- Contact Section Starts -->
+
+    <section id="contact" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-20">
+
+        <div class="container">
+
+            <h1 class="text-center font-bold text-3xl leading-tight mb-12 lg:mb-14 lg:text-5xl">Contact with <span class="text-[var(--Blue)]">Me</span></h1>
+
+            <!-- contact form part -->
+             <form>
+
+                <div class="space-y-4 lg:space-y-0 lg:flex lg:gap-14 lg:mb-20">
+                    <!-- Name input part -->
+                    <div class="lg:w-1/2">
+                        <label class="font-semibold text-base lg:text-lg">Your Name</label>
+                        <br>
+                        <input class="mt-2 w-full bg-transparent py-2 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl"
+                            placeholder="Your name here!" type="text" name="from_name" required>
+                    </div><br>
+                    <!-- Email input part -->
+                    <div class="lg:w-1/2">
+                        <label class="font-semibold text-base lg:text-lg">Your Email</label>
+                        <br>
+                        <input class="mt-2 w-full bg-transparent py-2 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl"
+                            type="email" placeholder="Your email address" required>
+                    </div><br>
+                </div>
+                <!-- textArea input part -->
+                <div class="lg:w-1/2 mt-8">
+                    <label class="font-semibold lg:text-lg">Your Message</label>
+                    <br>
+                    <textarea required class="w-full bg-transparent py-6 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl" placeholder="Type your message" name="message"></textarea>
+                </div><br>
+
+                <input type="submit" class="bg-[var(--Blue)] py-2 px-6 text-xl rounded-lg flex justify-center mx-auto mt-3 lg:mt-12 duration-500 font-medium hover:bg-sky-500 lg:px-9 lg:py-3 cursor-pointer" value="Send">
+
+             </form>
+
+        </div>
+
+    </section><hr>
+
+    <!-- Contact Section Ends -->
+
+    <!-- Footer Section Starts -->
+
+    <footer class="my-0 mx-auto w-[90%] lg:w-[1024px] ">
+
+        <div class="container pt-6 lg:pt-0 flex flex-col lg:flex-row items-center justify-between ">
+
+            <div>
+                <p class="text-sm mb-5 text-center lg:text-lg lg:mb-0">Copyright © 2024 - All right reserved by Mamunur Roshid Anas</p>
+            </div>
+            
+            <div class="flex lg:mt-14 items-center gap-4 text-lg mb-7 lg:text-2xl lg:mb-12">
+                <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                        class="fa-brands fa-linkedin-in p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
+                <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                        class="fa-brands fa-github p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
+                <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                        class="fa-brands fa-discord p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Footer Section Ends -->
 
     <script src="js/script.js"></script>
 </body>
