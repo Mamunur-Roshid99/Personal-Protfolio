@@ -22,39 +22,50 @@
 </head>
 <body>
 
-    <!-- Header Section Starts -->
-
-    <header class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-24 lg:mb-32">
+    <!-- Navbar part -->
+     <header id="header" class="my-0 mx-auto w-[90%] lg:w-[1024px] lg:fixed lg:top-0 lg:left-[116.5px] lg:bg-[var(--bg-color)] lg:z-20">
         <div class="container">
 
-            <!-- Navbar part -->
-                <nav class=" relative flex items-center justify-between py-4">
-                    <!-- nav logo -->
-                    <a href="#">
-                        <h1 class="text-2xl font-bold tracking-wider md:text-3xl text-[var(--Blue)]">Mamun.</h1>
-                    </a>
-                    <!-- nav menu -->
-                    <ul id="menu-link"
-                        class="opacity-0 absolute top-14 text-center flex flex-col gap-6 py-4 bg-[var(--bg-color)] w-full font-medium md:opacity-[1] md:relative md:top-0 md:flex-row md:bg-transparent md:w-44 lg:w-0 md:text-base lg:gap-8 uppercase">
-                        <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Home</a>
-                        </li>
-                        <li><a href="#about" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">About</a>
-                        </li>
-                        <li><a href="#skill" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Skills</a>
-                        </li>
-                        <li><a href="#project"
-                                class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Projects</a></li>
-                        <li><a href="#contact"
-                                class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Contact</a></li>
-                    </ul>
-                    <!-- toggle menu -->
-                    <div class="flex items-center gap-8 lg:gap-0 text-xl">
-                        <a href="#" class="hidden" id="white-mode"><i class="fa-solid fa-moon md:text-2xl md:ml-16"></i></a>
-                        <a href="#" id="dark-mode"><i class="fa-regular fa-sun md:text-2xl md:ml-16"></i></a>
-                        <a href="#" id="close-icon" class="hidden"><i class="fa-solid fa-xmark text-2xl"></i></a>
-                        <a href="#" id="menu-icon" class="md:hidden"><i class="fa-solid fa-bars"></i></a>
-                    </div>
-                </nav>
+            <nav class="relative flex items-center justify-between py-4">
+                <!-- nav logo -->
+                <a href="#">
+                    <h1 class="text-2xl font-bold tracking-wider md:text-3xl text-[var(--Blue)]">Mamun.</h1>
+                </a>
+                <!-- nav menu -->
+                <ul id="menu-link"
+                    class="opacity-0 absolute top-14 text-center flex flex-col gap-6 py-4 bg-[var(--bg-color)] w-full font-medium md:opacity-[1] md:relative md:top-0 md:flex-row md:bg-transparent md:w-44 lg:w-0 md:text-base lg:gap-8 uppercase">
+                    <li><a href="#"
+                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Home</a>
+                    </li>
+                    <li><a href="#about"
+                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">About</a>
+                    </li>
+                    <li><a href="#skill"
+                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Skills</a>
+                    </li>
+                    <li><a href="#project"
+                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Projects</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Contact</a>
+                    </li>
+                </ul>
+                <!-- toggle menu -->
+                <div class="flex items-center gap-8 lg:gap-0 text-xl">
+                    <a href="#" class="hidden" id="white-mode"><i class="fa-solid fa-moon md:text-2xl md:ml-16"></i></a>
+                    <a href="#" id="dark-mode"><i class="fa-regular fa-sun md:text-2xl md:ml-16"></i></a>
+                    <a href="#" id="close-icon" class="hidden"><i class="fa-solid fa-xmark text-2xl"></i></a>
+                    <a href="#" id="menu-icon" class="md:hidden"><i class="fa-solid fa-bars"></i></a>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Header Section Starts -->
+
+    <main id="Home" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-24 lg:mb-32 lg:mt-52">
+        <div class="container">
 
             <!--Hero Section  -->
             <main class="mt-5 flex flex-col items-center lg:flex-row lg:gap-44 lg:mt-20 lg:items-start">
@@ -65,16 +76,16 @@
                 <!-- Hero text -->
                  <div class="lg:w-[60%]">
                         <h1 id="text-h1" class="text-3xl font-bold text-[var(--White)] leading-tight mb-2 lg:text-5xl lg:mb-5">Mamunur Roshid Anas</h1>
-                        <p id="text-p" class="text-lg mb-4 text-[var(--p-tag)] font-semibold lg:text-2xl lg:mb-6">I am a <span id="text-ani"
+                        <p id="text-p" class="text-[15px] mb-4 text-[var(--p-tag)] font-semibold lg:text-2xl lg:mb-6">I am a <span id="text-ani"
                                 class="text-[var(--Blue)]">Front-End Developer</span></p>
                         <p id="text-p1" class="text-base text-[var(--p-tag)] mb-3 lg:text-lg lg:mb-6">I’m Mamun, a front-end developer skilled in HTML, CSS,
                             JavaScript, and Tailwind CSS. Passionate about creating modern,
                             user-friendly websites to enhance digital experiences.</p>
                     <!-- button -->
                      <div class="flex items-center gap-4 text-lg mb-7 lg:text-2xl lg:mb-12">
-                        <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-linkedin-in p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
-                        <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-github p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
-                        <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-discord p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
+                        <a href="https://www.linkedin.com/in/mamunur-roshid99/" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-linkedin-in p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
+                        <a href="https://github.com/Mamunur-Roshid99" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-github p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
+                        <a href="https://discord.com/users/mamun027900" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-discord p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
                      </div>
                      <!-- resume button -->
                       <a href="#" id="btn" target="_blank" class="px-6 py-3 rounded-lg font-semibold border-2 border-[var(--Blue)] tracking-wider">Resume</a>
@@ -86,7 +97,7 @@
             </main>
 
         </div>
-    </header>
+    </main>
 
     <!-- Header Section Ends -->
 
@@ -95,7 +106,7 @@
     <section id="about" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-16 lg:mb-28">
         <div class="container">
 
-            <h1 class="text-center font-bold text-3xl leading-tight mb-10 lg:mb-24 lg:text-5xl">About <span class="text-[var(--Blue)]">Me</span></h1>
+            <h1 class="text-center font-bold text-3xl leading-tight mb-10 lg:mb-16 lg:text-5xl">About <span class="text-[var(--Blue)]">Me</span></h1>
             
             <div class="flex flex-col space-y-8 items-center lg:flex-row lg:space-y-0 lg:gap-36">
             
@@ -108,7 +119,7 @@
                     <p id="about-text" class="text-base text-[var(--p-tag)] mb-12 lg:text-lg">👋 Hi, I'm <b>Mamunur Roshid Anas</b>, an 18-year-old front-end developer passionate about creating modern and user-friendly websites with
                     HTML, CSS, JavaScript, and TailwindCSS. While I’m still growing in the tech world, my dedication to innovation and
                     commitment to quality set me apart. Let’s bring your ideas to life through exceptional digital experiences! </p>
-                    <a href="#" id="btn"
+                    <a href="Email:web.dev.anas5@gmail.com" id="btn"
                         class="px-6 py-3 rounded-lg font-semibold border-2 border-[var(--Blue)] tracking-wider">Contact Me</a>
                 </div>
             
@@ -371,11 +382,11 @@
             </div>
             
             <div class="flex lg:mt-14 items-center gap-4 text-lg mb-7 lg:text-2xl lg:mb-12">
-                <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                <a href="https://www.linkedin.com/in/mamunur-roshid99/" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
                         class="fa-brands fa-linkedin-in p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
-                <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                <a href="https://github.com/Mamunur-Roshid99" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
                         class="fa-brands fa-github p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
-                <a href="#" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                <a href="https://discord.com/users/mamun027900" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
                         class="fa-brands fa-discord p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
             </div>
 
