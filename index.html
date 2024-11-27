@@ -300,7 +300,7 @@
             <h1 class="text-center font-bold text-3xl leading-tight mb-12 lg:mb-14 lg:text-5xl">Contact with <span class="text-[var(--Blue)]">Me</span></h1>
 
             <!-- contact form part -->
-             <form>
+             <form class="relative" name="submit-to-google-sheet">
 
                 <div class="space-y-4 lg:space-y-0 lg:flex lg:gap-14 lg:mb-20">
                     <!-- Name input part -->
@@ -308,26 +308,51 @@
                         <label class="font-semibold text-base lg:text-lg">Your Name</label>
                         <br>
                         <input class="mt-2 w-full bg-transparent py-2 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl"
-                            placeholder="Your name here!" type="text" name="from_name" required>
+                            placeholder="Your name here!" type="text" name="Name"  required>
                     </div><br>
                     <!-- Email input part -->
                     <div class="lg:w-1/2">
                         <label class="font-semibold text-base lg:text-lg">Your Email</label>
                         <br>
                         <input class="mt-2 w-full bg-transparent py-2 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl"
-                            type="email" placeholder="Your email address" required>
+                            type="email" placeholder="Your email address" name="Email" required>
                     </div><br>
                 </div>
                 <!-- textArea input part -->
                 <div class="lg:w-1/2 mt-8">
                     <label class="font-semibold lg:text-lg">Your Message</label>
                     <br>
-                    <textarea required class="w-full bg-transparent py-6 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl" placeholder="Type your message" name="message"></textarea>
+                    <textarea required class="w-full bg-transparent py-6 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl" placeholder="Type your message" name="Message"></textarea>
                 </div><br>
 
-                <input type="submit" class="bg-[var(--Blue)] py-2 px-6 text-xl rounded-lg flex justify-center mx-auto mt-3 lg:mt-12 duration-500 font-medium hover:bg-sky-500 lg:px-9 lg:py-3 cursor-pointer" value="Send">
+                <input id="sendbtn" type="submit" class="bg-[var(--Blue)] py-2 px-6 text-xl rounded-lg flex justify-center mx-auto mt-3 lg:mt-12 duration-500 font-medium hover:bg-sky-500 lg:px-9 lg:py-3 cursor-pointer" value="Send">
+
+
+                <!-- Popup Modal -->
+                <div id="popup">
+                    <div class="flex flex-col items-center">
+                        <!-- Icon -->
+                        <div class="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2l4-4m6 2a9 9 0 11-6.219-8.793M15 7H9" />
+                            </svg>
+                        </div>
+                        <!-- Message -->
+                        <h2 class="text-lg font-bold text-gray-800 mb-2">Great!</h2>
+                        <p class="text-gray-600 text-center mb-4">Message Delivered Successfully</p>
+                        <!-- OK Button -->
+                        <button id="okbutton"
+                            class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 transition">
+                            OK
+                        </button>
+                    </div>
+                </div>
 
              </form>
+
+            
 
         </div>
 
@@ -342,7 +367,7 @@
         <div class="container pt-6 lg:pt-0 flex flex-col lg:flex-row items-center justify-between ">
 
             <div>
-                <p class="text-sm mb-5 text-center lg:text-lg lg:mb-0">Copyright © 2024 - All right reserved by Mamunur Roshid Anas</p>
+                <p class="text-sm mb-5 text-center lg:text-base lg:mb-0">Copyright © 2024 - All right reserved by Mamunur Roshid Anas</p>
             </div>
             
             <div class="flex lg:mt-14 items-center gap-4 text-lg mb-7 lg:text-2xl lg:mb-12">
