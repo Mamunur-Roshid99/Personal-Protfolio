@@ -22,192 +22,232 @@
 </head>
 <body>
 
-    <!-- Navbar part -->
-     <header id="header" class="my-0 mx-auto w-[90%] lg:w-[1024px] lg:fixed lg:top-0 lg:left-[116.5px] lg:bg-[var(--bg-color)] lg:z-20">
-        <div class="container">
+    <!-- Navbar section start -->
 
-            <nav class="relative flex items-center justify-between py-4">
+     <nav id="header" class="lg:fixed lg:top-0 lg:left-0 lg:w-full lg:bg-[var(--bg-color)] lg:z-10">
+        <div class="container my-0 mx-auto w-[90%] lg:w-[1024px]">
+
+            <nav class="relative flex items-center justify-between py-4 lg:py-3">
+
                 <!-- nav logo -->
-                <a href="#">
-                    <h1 class="text-2xl font-bold tracking-wider md:text-3xl text-[var(--Blue)]">Mamun.</h1>
-                </a>
-                <!-- nav menu -->
-                <ul id="menu-link"
-                    class="opacity-0 absolute top-14 text-center flex flex-col gap-6 py-4 bg-[var(--bg-color)] w-full font-medium md:opacity-[1] md:relative md:top-0 md:flex-row md:bg-transparent md:w-44 lg:w-0 md:text-base lg:gap-8 uppercase">
-                    <li><a href="#"
-                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Home</a>
-                    </li>
-                    <li><a href="#about"
-                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">About</a>
-                    </li>
-                    <li><a href="#skill"
-                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Skills</a>
-                    </li>
-                    <li><a href="#project"
-                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Projects</a>
-                    </li>
-                    <li><a href="#contact"
-                            class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Contact</a>
-                    </li>
-                </ul>
-                <!-- toggle menu -->
-                <div class="flex items-center gap-8 lg:gap-0 text-xl">
-                    <a href="#" class="hidden" id="white-mode"><i class="fa-solid fa-moon md:text-2xl md:ml-16"></i></a>
-                    <a href="#" id="dark-mode"><i class="fa-regular fa-sun md:text-2xl md:ml-16"></i></a>
-                    <a href="#" id="close-icon" class="hidden"><i class="fa-solid fa-xmark text-2xl"></i></a>
-                    <a href="#" id="menu-icon" class="md:hidden"><i class="fa-solid fa-bars"></i></a>
-                </div>
+                <a href="#" class="text-2xl font-bold tracking-wider md:text-3xl text-[var(--Blue)]">Mamunu.</a>
+
+                    <!-- nav menu -->
+                    <ul id="menu-link"
+                        class="opacity-0 absolute top-14 text-center flex flex-col gap-6 py-4 bg-[var(--bg-color)] w-full font-medium md:opacity-[1] md:relative md:top-0 md:flex-row md:bg-transparent md:w-44 lg:w-0 md:text-base lg:gap-8 uppercase">
+                        <li><a href="#" class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Home</a>
+                        </li>
+                        <li><a href="#about"
+                                class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">About</a>
+                        </li>
+                        <li><a href="#skill"
+                                class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Skills</a>
+                        </li>
+                        <li><a href="#project"
+                                class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Projects</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="hover:text-[var(--Blue)] duration-500 hover:shadow-[var(--Blue)] hover:shadow-2xl">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- toggle menu -->
+                    <div class="flex items-center gap-8 lg:gap-0 text-xl">
+                        <a href="#" class="hidden" id="white-mode"><i class="fa-solid fa-moon md:text-2xl md:ml-16"></i></a>
+                        <a href="#" id="dark-mode"><i class="fa-regular fa-sun md:text-2xl md:ml-16"></i></a>
+                        <a href="#" id="close-icon" class="hidden"><i class="fa-solid fa-xmark text-2xl"></i></a>
+                        <a href="#" id="menu-icon" class="md:hidden"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+
             </nav>
 
         </div>
-    </header>
+    </nav>
+
+    <!-- Navbar section Ends -->
 
     <!-- Header Section Starts -->
-
-    <main id="Home" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-24 lg:mb-32 lg:mt-52">
+    
+    <main id="home" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-20 lg:mb-32 lg:mt-52">
         <div class="container">
-
+    
             <!--Hero Section  -->
             <main class="mt-5 flex flex-col items-center lg:flex-row lg:gap-44 lg:mt-20 lg:items-start">
                 <!-- Hero Img -->
-                 <div class="lg:hidden w-[300px] border-2 border-[var(--Blue)] shadow-[var(--Blue)] shadow-md pt-14 mb-5 rounded-2xl">
+                <div
+                    class="lg:hidden w-[300px] border-2 border-[var(--Blue)] shadow-[var(--Blue)] shadow-md pt-14 mb-5 rounded-2xl">
                     <img src="images/Mamun.png">
-                 </div>
+                </div>
                 <!-- Hero text -->
-                 <div class="lg:w-[60%]">
-                        <h1 id="text-h1" class="text-3xl font-bold text-[var(--White)] leading-tight mb-2 lg:text-5xl lg:mb-5">Mamunur Roshid Anas</h1>
-                        <p id="text-p" class="text-[15px] mb-4 text-[var(--p-tag)] font-semibold lg:text-2xl lg:mb-6">I am a <span id="text-ani"
-                                class="text-[var(--Blue)]">Front-End Developer</span></p>
-                        <p id="text-p1" class="text-base text-[var(--p-tag)] mb-3 lg:text-lg lg:mb-6">I’m Mamun, a front-end developer skilled in HTML, CSS,
-                            JavaScript, and Tailwind CSS. Passionate about creating modern,
-                            user-friendly websites to enhance digital experiences.</p>
+                <div class="lg:w-[60%]">
+                    <h1 id="text-h1" class="text-3xl font-bold text-[var(--White)] leading-tight mb-2 lg:text-5xl lg:mb-5">
+                        Mamunur Roshid Anas</h1>
+                    <p id="text-p" class="text-[15px] mb-4 text-[var(--p-tag)] font-semibold lg:text-2xl lg:mb-6">I am a
+                        <span id="text-ani" class="text-[var(--Blue)]">Front-End Developer</span></p>
+                    <p id="text-p1" class="text-base text-[var(--p-tag)] mb-3 lg:text-lg lg:mb-6">I’m Mamun, a front-end
+                        developer skilled in HTML, CSS,
+                        JavaScript, and Tailwind CSS. Passionate about creating modern,
+                        user-friendly websites to enhance digital experiences.</p>
                     <!-- button -->
-                     <div class="flex items-center gap-4 text-lg mb-7 lg:text-2xl lg:mb-12">
-                        <a href="https://www.linkedin.com/in/mamunur-roshid99/" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-linkedin-in p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
-                        <a href="https://github.com/Mamunur-Roshid99" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-github p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
-                        <a href="https://discord.com/users/mamun027900" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i class="fa-brands fa-discord p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
-                     </div>
-                     <!-- resume button -->
-                      <a href="#" id="btn" target="_blank" class="px-6 py-3 rounded-lg font-semibold border-2 border-[var(--Blue)] tracking-wider">Resume</a>
-                 </div>
-                 <!-- Hero image dekstop -->
-                    <div class="hidden lg:block lg:w-[35%] w-[300px] border-2 border-[var(--Blue)] shadow-[var(--Blue)] shadow-md pt-14 mb-5 rounded-2xl">
-                        <img src="images/Mamun.png">
+                    <div class="flex items-center gap-4 text-lg mb-7 lg:text-2xl lg:mb-12">
+                        <a href="https://www.linkedin.com/in/mamunur-roshid99/" target="_blank"
+                            class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                                class="fa-brands fa-linkedin-in p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
+                        <a href="https://github.com/Mamunur-Roshid99" target="_blank"
+                            class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                                class="fa-brands fa-github p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
+                        <a href="https://discord.com/users/mamun027900" target="_blank"
+                            class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                                class="fa-brands fa-discord p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
                     </div>
+                    <!-- resume button -->
+                    <a href="#" id="btn" target="_blank"
+                        class="px-6 py-3 rounded-lg font-semibold border-2 border-[var(--Blue)] tracking-wider">Resume</a>
+                </div>
+                <!-- Hero image dekstop -->
+                <div
+                    class="hidden lg:block lg:w-[35%] w-[300px] border-2 border-[var(--Blue)] shadow-[var(--Blue)] shadow-md pt-14 mb-5 rounded-2xl">
+                    <img src="images/Mamun.png">
+                </div>
             </main>
-
+    
         </div>
     </main>
-
+    
     <!-- Header Section Ends -->
-
+    
     <!-- About Section Starts -->
-
+    
     <section id="about" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-16 lg:mb-28">
         <div class="container">
-
-            <h1 class="text-center font-bold text-3xl leading-tight mb-10 lg:mb-16 lg:text-5xl">About <span class="text-[var(--Blue)]">Me</span></h1>
-            
+    
+            <h1 class="text-center font-bold text-3xl leading-tight mb-10 lg:mb-16 lg:text-5xl">About <span
+                    class="text-[var(--Blue)]">Me</span></h1>
+    
             <div class="flex flex-col space-y-8 items-center lg:flex-row lg:space-y-0 lg:gap-36">
-            
+    
                 <!-- image part -->
-                <div class="w-[300px] border-2 border-[var(--Blue)] shadow-[var(--Blue)] shadow-md pt-14 mb-5 rounded-2xl lg:w-[40%]">
+                <div
+                    class="w-[300px] border-2 border-[var(--Blue)] shadow-[var(--Blue)] shadow-md pt-14 mb-5 rounded-2xl lg:w-[40%]">
                     <img src="images/Mamun.png">
                 </div>
                 <!--text part  -->
                 <div class="lg:w-[60%]">
-                    <p id="about-text" class="text-base text-[var(--p-tag)] mb-12 lg:text-lg">👋 Hi, I'm <b>Mamunur Roshid Anas</b>, an 18-year-old front-end developer passionate about creating modern and user-friendly websites with
-                    HTML, CSS, JavaScript, and TailwindCSS. While I’m still growing in the tech world, my dedication to innovation and
-                    commitment to quality set me apart. Let’s bring your ideas to life through exceptional digital experiences! </p>
+                    <p id="about-text" class="text-base text-[var(--p-tag)] mb-12 lg:text-lg">👋 Hi, I'm <b>Mamunur Roshid
+                            Anas</b>, an 18-year-old front-end developer passionate about creating modern and user-friendly
+                        websites with
+                        HTML, CSS, JavaScript, and TailwindCSS. While I’m still growing in the tech world, my dedication to
+                        innovation and
+                        commitment to quality set me apart. Let’s bring your ideas to life through exceptional
+                        digital experiences! </p>
                     <a href="Email:web.dev.anas5@gmail.com" id="btn"
-                        class="px-6 py-3 rounded-lg font-semibold border-2 border-[var(--Blue)] tracking-wider">Contact Me</a>
+                        class="px-6 py-3 rounded-lg font-semibold border-2 border-[var(--Blue)] tracking-wider">Contact
+                        Me</a>
                 </div>
-            
+    
             </div>
-
+    
         </div>
     </section>
-
+    
     <!-- About Section Ends -->
-
+    
     <!-- Skills Section Starts -->
     
     <section id="skill" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-20 lg:mb-28">
-
+    
         <div class="container">
-
-            <h1 class="text-center font-bold text-3xl leading-tight mb-12 lg:mb-24 lg:text-5xl">My <span class="text-[var(--Blue)]">Skills</span></h1>
-
+    
+            <h1 class="text-center font-bold text-3xl leading-tight mb-12 lg:mb-24 lg:text-5xl">My <span
+                    class="text-[var(--Blue)]">Skills</span></h1>
+    
             <div class="flex flex-wrap gap-3 lg:gap-8 justify-center">
-                <div id="skip" class="bg-[var(--Grey)] size-36 flex flex-col gap-3 items-center justify-center hover:scale-105 transition-transform duration-300 hover:shadow-md hover:shadow-[var(--Blue)] lg:size-60">
+                <div id="skip"
+                    class="bg-[var(--Grey)] size-36 flex flex-col gap-3 items-center justify-center hover:scale-105 transition-transform duration-300 hover:shadow-md hover:shadow-[var(--Blue)] lg:size-60">
                     <img class="size-12 md:size-20" src="https://i.ibb.co/HPwNMnc/html-5132b1f6.png" alt="">
                     <h1 class="text-lg lg:text-2xl font-medium">HTML</h1>
                 </div>
-                <div id="skip1" class="bg-[var(--Grey)] size-36 flex flex-col gap-3 items-center justify-center hover:scale-105 transition-transform duration-300 hover:shadow-md hover:shadow-[var(--Blue)] lg:size-60">
+                <div id="skip1"
+                    class="bg-[var(--Grey)] size-36 flex flex-col gap-3 items-center justify-center hover:scale-105 transition-transform duration-300 hover:shadow-md hover:shadow-[var(--Blue)] lg:size-60">
                     <img class="size-12 md:size-20" src="https://i.ibb.co/Ch52yML/css-7c2f7af3.png" alt="">
                     <h1 class="text-lg lg:text-2xl font-medium">CSS</h1>
                 </div>
-                <div id="skip2" class="bg-[var(--Grey)] size-36 flex flex-col gap-3 items-center justify-center hover:scale-105 transition-transform duration-300 hover:shadow-md hover:shadow-[var(--Blue)] lg:size-60">
+                <div id="skip2"
+                    class="bg-[var(--Grey)] size-36 flex flex-col gap-3 items-center justify-center hover:scale-105 transition-transform duration-300 hover:shadow-md hover:shadow-[var(--Blue)] lg:size-60">
                     <img class="size-12 md:size-20" src="https://i.ibb.co/SvHdfrH/js-6b71920c.png" alt="">
                     <h1 class="text-lg lg:text-2xl font-medium">JavaScript</h1>
                 </div>
-                <div id="skip3" class="bg-[var(--Grey)] size-36 flex flex-col gap-3 items-center justify-center hover:scale-105 transition-transform duration-300 hover:shadow-md hover:shadow-[var(--Blue)] lg:size-60">
+                <div id="skip3"
+                    class="bg-[var(--Grey)] size-36 flex flex-col gap-3 items-center justify-center hover:scale-105 transition-transform duration-300 hover:shadow-md hover:shadow-[var(--Blue)] lg:size-60">
                     <img class="size-12 md:size-20" src="https://i.ibb.co/Y3Cz4Cx/tailwind-0ab529d8.png" alt="">
                     <h1 class="text-lg lg:text-2xl font-medium">Tailwind CSS</h1>
                 </div>
             </div>
-
+    
         </div>
-
+    
     </section>
     
     <!-- Skills Section Ends -->
-
+    
     <!-- Project Section Starts -->
-
-     <section id="project" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-24 lg:mb-32">
-
-         <div class="container">
-
-             <h1 class="text-center font-bold text-3xl leading-tight mb-12 lg:mb-24 lg:text-5xl">My <span class="text-[var(--Blue)]">Projects</span></h1>
-
-             <div class="grid grid-cols-1 lg:grid-cols-2 space-y-7 lg:space-y-0 lg:gap-28">
-
+    
+    <section id="project" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-24 lg:mb-32">
+    
+        <div class="container">
+    
+            <h1 class="text-center font-bold text-3xl leading-tight mb-12 lg:mb-24 lg:text-5xl">My <span
+                    class="text-[var(--Blue)]">Projects</span></h1>
+    
+            <div class="grid grid-cols-1 lg:grid-cols-2 space-y-7 lg:space-y-0 lg:gap-28">
+    
                 <!-- Project 1 -->
-                 <div id="projectdiv" class="relative w-full h-[230px] lg:w-[450px] lg:h-[300px] rounded-2xl overflow-hidden">
-
+                <div id="projectdiv"
+                    class="relative w-full h-[230px] lg:w-[450px] lg:h-[300px] rounded-2xl overflow-hidden">
+    
                     <div class="absolute top-0 left-0 w-[100%]">
-                        <img id="projectImg" src="images/Untitled-2.jpg" class="rounded-2xl h-[260px] lg:h-[320px] object-fill">
+                        <img id="projectImg" src="images/Untitled-2.jpg"
+                            class="rounded-2xl h-[260px] lg:h-[320px] object-fill">
                     </div>
-
+    
                     <div id="projectText" class="p-5 lg:p-9">
                         <h1 class="text-2xl mb-3 lg:text-3xl lg:mb-5 font-bold">Front end developer</h1>
-                        <p class="text-sm mb-3 lg:mb-4 lg:text-base text-[var(--p-tag)]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dolorum,</p>
-                        <p class="text-sm font-bold text-[var(--Blue)] mb-2 flex items-center gap-3 lg:mb-4"><span class="border-2 border-sky-400 px-3 py-1 rounded-lg cursor-pointer">HTML</span> <span class="border-2 border-sky-400 px-3 py-1 rounded-lg cursor-pointer">CSS</span> <span class="border-2 border-sky-400 px-3 py-1 rounded-lg cursor-pointer">JavaScript</span></p><hr class="border-[1px] border-[var(--Blue)] my-4">
+                        <p class="text-sm mb-3 lg:mb-4 lg:text-base text-[var(--p-tag)]">Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Culpa dolorum,</p>
+                        <p class="text-sm font-bold text-[var(--Blue)] mb-2 flex items-center gap-3 lg:mb-4"><span
+                                class="border-2 border-sky-400 px-3 py-1 rounded-lg cursor-pointer">HTML</span> <span
+                                class="border-2 border-sky-400 px-3 py-1 rounded-lg cursor-pointer">CSS</span> <span
+                                class="border-2 border-sky-400 px-3 py-1 rounded-lg cursor-pointer">JavaScript</span></p>
+                        <hr class="border-[1px] border-[var(--Blue)] my-4">
                         <div class="flex items-center gap-7 text-lg">
-                            <a href="#" class="flex items-center gap-1 bg-[var(--Blue)] text-base py-1 px-3 lg:py-2 lg:px-4 rounded-full duration-300 hover:bg-sky-500">
+                            <a href="#"
+                                class="flex items-center gap-1 bg-[var(--Blue)] text-base py-1 px-3 lg:py-2 lg:px-4 rounded-full duration-300 hover:bg-sky-500">
                                 <i class="fa-solid fa-link"></i>
                                 <h1>Live</h1>
                             </a>
-                            <a href="#" class="flex items-center gap-1 bg-[var(--Blue)] text-base py-1 px-3 lg:py-2 lg:px-4 rounded-full duration-300 hover:bg-sky-500">
+                            <a href="#"
+                                class="flex items-center gap-1 bg-[var(--Blue)] text-base py-1 px-3 lg:py-2 lg:px-4 rounded-full duration-300 hover:bg-sky-500">
                                 <i class="fa-brands fa-github"></i>
                                 <h1>Code</h1>
                             </a>
                         </div>
                     </div>
-
-                 </div>
-
+    
+                </div>
+    
                 <!-- Project 2 -->
-                <div id="projectdiv" class="relative w-full h-[230px] lg:w-[450px] lg:h-[300px] rounded-2xl overflow-hidden">
-                
+                <div id="projectdiv"
+                    class="relative w-full h-[230px] lg:w-[450px] lg:h-[300px] rounded-2xl overflow-hidden">
+    
                     <div class="absolute top-0 left-0 w-[100%]">
-                        <img id="projectImg" src="images/Untitled-1.jpg" class="rounded-2xl h-[260px] lg:h-[320px] object-fill">
+                        <img id="projectImg" src="images/Untitled-1.jpg"
+                            class="rounded-2xl h-[260px] lg:h-[320px] object-fill">
                     </div>
-                
+    
                     <div id="projectText" class="p-5 lg:p-9">
                         <h1 class="text-2xl mb-3 lg:text-3xl lg:mb-5 font-bold">Front end developer</h1>
-                        <p class="text-sm mb-3 lg:mb-4 lg:text-base text-[var(--p-tag)]">Lorem ipsum, dolor sit amet consectetur
+                        <p class="text-sm mb-3 lg:mb-4 lg:text-base text-[var(--p-tag)]">Lorem ipsum, dolor sit amet
+                            consectetur
                             adipisicing elit. Culpa dolorum,</p>
                         <p class="text-sm font-bold text-[var(--Blue)] mb-2 flex items-center gap-3 lg:mb-4"><span
                                 class="border-2 border-sky-400 px-3 py-1 rounded-lg cursor-pointer">HTML</span> <span
@@ -227,19 +267,22 @@
                             </a>
                         </div>
                     </div>
-                
+    
                 </div>
-
+    
                 <!-- Project 3 -->
-                <div id="projectdiv" class="relative w-full h-[230px] lg:w-[450px] lg:h-[300px] rounded-2xl overflow-hidden">
-                
+                <div id="projectdiv"
+                    class="relative w-full h-[230px] lg:w-[450px] lg:h-[300px] rounded-2xl overflow-hidden">
+    
                     <div class="absolute top-0 left-0 w-[100%]">
-                        <img id="projectImg" src="images/Untitled-3.jpg" class="rounded-2xl h-[260px] lg:h-[320px] object-fill">
+                        <img id="projectImg" src="images/Untitled-3.jpg"
+                            class="rounded-2xl h-[260px] lg:h-[320px] object-fill">
                     </div>
-                
+    
                     <div id="projectText" class="p-5 lg:p-9">
                         <h1 class="text-2xl mb-3 lg:text-3xl lg:mb-5 font-bold">Front end developer</h1>
-                        <p class="text-sm mb-3 lg:mb-4 lg:text-base text-[var(--p-tag)]">Lorem ipsum, dolor sit amet consectetur
+                        <p class="text-sm mb-3 lg:mb-4 lg:text-base text-[var(--p-tag)]">Lorem ipsum, dolor sit amet
+                            consectetur
                             adipisicing elit. Culpa dolorum,</p>
                         <p class="text-sm font-bold text-[var(--Blue)] mb-2 flex items-center gap-3 lg:mb-4"><span
                                 class="border-2 border-sky-400 px-3 py-1 rounded-lg cursor-pointer">HTML</span> <span
@@ -259,19 +302,21 @@
                             </a>
                         </div>
                     </div>
-                
+    
                 </div>
-
+    
                 <!-- Project 4 -->
-                <div id="projectdiv" class="relative w-full h-[230px] lg:w-[450px] lg:h-[300px] rounded-2xl overflow-hidden">
-                
+                <div id="projectdiv"
+                    class="relative w-full h-[230px] lg:w-[450px] lg:h-[300px] rounded-2xl overflow-hidden">
+    
                     <div class="absolute top-0 left-0 w-[100%]">
                         <img id="projectImg" src="images/web.jpg" class="rounded-2xl h-[260px] lg:h-[320px] object-fill">
                     </div>
-                
+    
                     <div id="projectText" class="p-5 lg:p-9">
                         <h1 class="text-2xl mb-3 lg:text-3xl lg:mb-5 font-bold">Front end developer</h1>
-                        <p class="text-sm mb-3 lg:mb-4 lg:text-base text-[var(--p-tag)]">Lorem ipsum, dolor sit amet consectetur
+                        <p class="text-sm mb-3 lg:mb-4 lg:text-base text-[var(--p-tag)]">Lorem ipsum, dolor sit amet
+                            consectetur
                             adipisicing elit. Culpa dolorum,</p>
                         <p class="text-sm font-bold text-[var(--Blue)] mb-2 flex items-center gap-3 lg:mb-4"><span
                                 class="border-2 border-sky-400 px-3 py-1 rounded-lg cursor-pointer">HTML</span> <span
@@ -291,41 +336,44 @@
                             </a>
                         </div>
                     </div>
-                
+    
                 </div>
-
-             </div>
-
-         </div>
-
-     </section>
-
+    
+            </div>
+    
+        </div>
+    
+    </section>
+    
     <!-- Project Section Ends -->
-
+    
     <!-- Contact Section Starts -->
-
+    
     <section id="contact" class="my-0 mx-auto w-[90%] lg:w-[1024px] mb-20">
-
+    
         <div class="container">
-
-            <h1 class="text-center font-bold text-3xl leading-tight mb-12 lg:mb-14 lg:text-5xl">Contact with <span class="text-[var(--Blue)]">Me</span></h1>
-
+    
+            <h1 class="text-center font-bold text-3xl leading-tight mb-12 lg:mb-14 lg:text-5xl">Contact with <span
+                    class="text-[var(--Blue)]">Me</span></h1>
+    
             <!-- contact form part -->
-             <form class="relative" name="submit-to-google-sheet">
-
+            <form class="relative" name="submit-to-google-sheet">
+    
                 <div class="space-y-4 lg:space-y-0 lg:flex lg:gap-14 lg:mb-20">
                     <!-- Name input part -->
                     <div class="lg:w-1/2">
                         <label class="font-semibold text-base lg:text-lg">Your Name</label>
                         <br>
-                        <input class="mt-2 w-full bg-transparent py-2 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl"
-                            placeholder="Your name here!" type="text" name="Name"  required>
+                        <input
+                            class="mt-2 w-full bg-transparent py-2 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl"
+                            placeholder="Your name here!" type="text" name="Name" required>
                     </div><br>
                     <!-- Email input part -->
                     <div class="lg:w-1/2">
                         <label class="font-semibold text-base lg:text-lg">Your Email</label>
                         <br>
-                        <input class="mt-2 w-full bg-transparent py-2 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl"
+                        <input
+                            class="mt-2 w-full bg-transparent py-2 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl"
                             type="email" placeholder="Your email address" name="Email" required>
                     </div><br>
                 </div>
@@ -333,19 +381,23 @@
                 <div class="lg:w-1/2 mt-8">
                     <label class="font-semibold lg:text-lg">Your Message</label>
                     <br>
-                    <textarea required class="w-full bg-transparent py-6 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl" placeholder="Type your message" name="Message"></textarea>
+                    <textarea required
+                        class="w-full bg-transparent py-6 border-x-0 border-t-0 border-b-2 border-[var(--Blue)] lg:text-xl"
+                        placeholder="Type your message" name="Message"></textarea>
                 </div><br>
-
-                <input id="sendbtn" type="submit" class="bg-[var(--Blue)] py-2 px-6 text-xl rounded-lg flex justify-center mx-auto mt-3 lg:mt-12 duration-500 font-medium hover:bg-sky-500 lg:px-9 lg:py-3 cursor-pointer" value="Send">
-
-
+    
+                <input id="sendbtn" type="submit"
+                    class="bg-[var(--Blue)] py-2 px-6 text-xl rounded-lg flex justify-center mx-auto mt-3 lg:mt-12 duration-500 font-medium hover:bg-sky-500 lg:px-9 lg:py-3 cursor-pointer"
+                    value="Send">
+    
+    
                 <!-- Popup Modal -->
                 <div id="popup">
                     <div class="flex flex-col items-center">
                         <!-- Icon -->
                         <div class="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                            <svg class="w-8 h-8 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
+                            <svg class="w-8 h-8 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12l2 2l4-4m6 2a9 9 0 11-6.219-8.793M15 7H9" />
                             </svg>
@@ -360,41 +412,48 @@
                         </button>
                     </div>
                 </div>
-
-             </form>
-
-            
-
+    
+            </form>
+    
+    
+    
         </div>
-
-    </section><hr>
-
+    
+    </section>
+    <hr>
+    
     <!-- Contact Section Ends -->
-
+    
     <!-- Footer Section Starts -->
-
+    
     <footer class="my-0 mx-auto w-[90%] lg:w-[1024px] ">
-
+    
         <div class="container pt-6 lg:pt-0 flex flex-col lg:flex-row items-center justify-between ">
-
+    
             <div>
-                <p class="text-sm mb-5 text-center lg:text-base lg:mb-0">Copyright © 2024 - All right reserved by Mamunur Roshid Anas</p>
+                <p class="text-sm mb-5 text-center lg:text-base lg:mb-0">Copyright © 2024 - All right reserved by Mamunur
+                    Roshid Anas</p>
             </div>
-            
+    
             <div class="flex lg:mt-14 items-center gap-4 text-lg mb-7 lg:text-2xl lg:mb-12">
-                <a href="https://www.linkedin.com/in/mamunur-roshid99/" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                <a href="https://www.linkedin.com/in/mamunur-roshid99/" target="_blank"
+                    class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
                         class="fa-brands fa-linkedin-in p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
-                <a href="https://github.com/Mamunur-Roshid99" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                <a href="https://github.com/Mamunur-Roshid99" target="_blank"
+                    class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
                         class="fa-brands fa-github p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
-                <a href="https://discord.com/users/mamun027900" target="_blank" class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
+                <a href="https://discord.com/users/mamun027900" target="_blank"
+                    class="border-2 border-[var(--Blue)] duration-700 hover:border-white rounded-full"><i
                         class="fa-brands fa-discord p-2 text-[var(--Blue)] duration-700 hover:text-white"></i></a>
             </div>
-
+    
         </div>
-
+    
     </footer>
-
+    
     <!-- Footer Section Ends -->
+
+    
 
     <script src="js/script.js"></script>
 </body>

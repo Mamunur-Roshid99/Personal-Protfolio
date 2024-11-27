@@ -160,4 +160,5 @@
 
 .scroll-header {
     border-bottom: 1px solid var(--Grey);
+    margin-bottom: 400px;
 }
