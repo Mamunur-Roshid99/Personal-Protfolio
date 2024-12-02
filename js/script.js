@@ -110,3 +110,42 @@ function slideNavbar() {
 }
 
 slideNavbar();
+
+
+
+// animatoin
+function textAnimation () {
+  const container = document.querySelector("#container");
+
+  let career = ["Front-End Developer"];
+
+  let careerIndex = 0;
+
+  let characterIndex = 0;
+
+  updateText();
+
+  function updateText() {
+    characterIndex++;
+
+    container.innerHTML = `
+                        <p class="text-xl mb-4 text-[var(--p-tag)] font-semibold lg:text-2xl lg:mb-6">I am a
+                        <span id="text-ani" class="text-[var(--Blue)] ml-2">${career[
+                          careerIndex
+                        ].slice(0, characterIndex)}</span></p>
+`;
+
+    if (characterIndex === career[careerIndex].length) {
+      careerIndex++;
+      characterIndex = 0;
+    }
+
+    if (careerIndex === career.length) {
+      careerIndex = 0;
+    }
+
+    setTimeout(updateText, 200);
+  }
+}
+
+textAnimation();
