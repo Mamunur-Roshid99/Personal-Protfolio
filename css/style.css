@@ -128,34 +128,6 @@
 
 /* button hover ends */
 
-/* text animation starts */
-
-#text-ani {
-    position: absolute;
-    margin-left: 5px;
-    color: var(--Blue);
-}
-
-#text-ani::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: var(--bg-color);
-    border-left: 4px solid var(--Blue);
-    animation: typing 6s steps(17) infinite;
-}
-
- /* cursor blinking */
- @keyframes typing {
-    50% { left: 100%;
-           margin: 0 -30px 0 30px;
-        }
- } 
-
-/* text animation ends */
-
 
 .scroll-header {
     border-bottom: 1px solid var(--Grey);
