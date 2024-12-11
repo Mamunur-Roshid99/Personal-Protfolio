@@ -149,3 +149,19 @@ function textAnimation () {
 }
 
 textAnimation();
+
+
+// animation scroll
+const sr = ScrollReveal({
+  origin: "bottom",
+  distance: "60px",
+  duration: 2500,
+  delay: 400
+})
+
+sr.reveal("#header", { origin: "top"});
+sr.reveal("#home");
+sr.reveal("#about");
+sr.reveal("#skill");
+sr.reveal("#project");
+sr.reveal("#contact");
