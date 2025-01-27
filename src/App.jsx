@@ -1,11 +1,12 @@
 import './App.css'
+import Home from './components/home/Home';
+import Navbar from './layouts/Navbar';
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline bg-red-800">Hello world!</h1>
-      <p className="">mk</p>
-      <h1 className='tex'>fasdf</h1>
+     <Navbar />
+     {/* <Home />  */}
     </>
   );
 }

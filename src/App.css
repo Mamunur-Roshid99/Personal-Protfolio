@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@theme {
+  --font-display: "Poppins", "serif";
+  --color-regal-blue: #4769F3;
+  --color-regal-black: #090E34;
+  --color-regal-skyblue: #4A6CF7;
+  --color-regal-gray: #959CB1;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: #FFFFFF;
+}
