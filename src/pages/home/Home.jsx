@@ -8,9 +8,9 @@ import photo from "/public/profile1.jpg"
 
 const Home = () => {
   return (
-    <section id="home" className="">
+    <section>
       {/*  */}
-      <div className="container w-[90%] mx-auto pt-28 flex justify-between gap-10">
+      <div className="container w-[90%] mx-auto pt-28 flex justify-between gap-10 mb-14">
         {/* left */}
         <div className=" w-[40%] flex flex-col gap-[20px]">
           <h5 className="font-medium text-regal-blue mb-[-10px]">

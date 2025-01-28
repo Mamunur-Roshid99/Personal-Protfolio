@@ -1,15 +1,17 @@
 import React from 'react'
+
 import { Link } from 'react-router-dom';
+import photo from '/public/logo.png'
 
 const Navbar = () => {
   return (
     <nav className="">
       <div className="container w-[90%] mx-auto py-[20px] flex items-center justify-between">
-        <a href="#home" className="text-[32px] font-semibold">
-          Mamun .
+        <a href="#home">
+          <img src={photo} alt="logo" className='w-[80%]' />
         </a>
 
-        <ul className="flex items-center justify-center gap-11 font-normal text-[17px] text-regal-black">
+        <ul className="flex items-center justify-center gap-11 font-medium text-[17px] text-regal-black">
           <Link to="/" className="hover:text-regal-blue duration-300">
             Home
           </Link>
