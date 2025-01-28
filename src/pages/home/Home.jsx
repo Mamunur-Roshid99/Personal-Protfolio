@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
+import photo from "/public/profile1.jpg"
 
 const Home = () => {
   return (
@@ -56,7 +57,7 @@ const Home = () => {
           <div>
             <img
               className="rounded-full h-96"
-              src="/public/profile1.jpg"
+              src={photo}
               alt="img"
             />
           </div>
