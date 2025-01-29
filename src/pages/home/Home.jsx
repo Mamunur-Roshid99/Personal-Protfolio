@@ -27,25 +27,28 @@ const Home = () => {
           </p>
           <div className="flex items-center gap-3 text-xl text-white">
             <a
-              href="#"
+              href="https://github.com/Mamunur-Roshid99"
+              target="_blank"
               className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
             >
               <FaGithub />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/mamunur-roshid99/"
+              target="_blank"
               className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
             >
               <FaLinkedin />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/mamunur.roshid.655427"
+              target="_blank"
               className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
             >
               <FaFacebook />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/mamunur_roshid12/" target="_blank"
               className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
             >
               <FaInstagram />
@@ -55,11 +58,7 @@ const Home = () => {
         {/* right */}
         <div className="mt-[-40px] w-[50%] flex  justify-center">
           <div>
-            <img
-              className="rounded-full h-96"
-              src={photo}
-              alt="img"
-            />
+            <img className="rounded-full h-96" src={photo} alt="img" />
           </div>
         </div>
       </div>

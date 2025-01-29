@@ -10,7 +10,7 @@ const Projects = () => {
     <section>
       {/*  */}
       <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
-        {/* left */}
+        {/* top */}
         <div className="w-[60%] mx-auto text-center flex flex-col justify-center items-center gap-3">
           <h1 className="text-4xl text-center font-semibold text-regal-blue">
             My Projects
@@ -20,7 +20,7 @@ const Projects = () => {
             Here are the top projects that I have done or am doing:
           </p>
         </div>
-        {/* right */}
+        {/* upper */}
         <div className='flex items-center justify-between w-full gap-10'>
           {/* project1 */}
           <div className="group relative overflow-hidden w-[384px] rounded-2xl ">
