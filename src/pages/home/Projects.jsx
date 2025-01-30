@@ -1,30 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import img1 from "/public/Untitled-1.jpg";
 import img2 from "/public/Untitled-2.jpg";
 import img3 from "/public/Untitled-3.jpg";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ title, image, description }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="relative overflow-hidden w-[384px] rounded-2xl cursor-pointer group">
+    <div
+      className="relative w-[384px] rounded-2xl cursor-pointer overflow-hidden group"
+      onClick={() => setIsOpen(!isOpen)}
+    >
       {/* Overlay */}
-      <div className="absolute w-full h-full bg-[#4D5360] opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
+      <div className="absolute inset-0 bg-[#4D5360] opacity-0 group-hover:opacity-60 transition-all duration-500 before:absolute before:inset-0 before:bg-[#4D5360] before:opacity-0 before:transition-all before:duration-500 before:content-['']" />
 
       {/* Image */}
       <img src={image} alt={title} className="w-full h-full object-cover" />
 
       {/* Title */}
-      <div className="absolute left-7 bottom-5 opacity-0 group-hover:opacity-100 transition-all duration-500 text-amber-200 font-bold text-2xl">
+      <div
+        className={`absolute left-7 bottom-5 text-amber-200 font-bold text-2xl transition-all duration-500 ${
+          isOpen ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+        }`}
+      >
         {title}
       </div>
 
       {/* Description */}
-      <div className="absolute left-7 bottom-2 opacity-0 group-hover:opacity-100 transition-all duration-500 text-sm text-gray-200 w-80">
+      <div
+        className={`absolute left-7 bottom-2 text-sm text-gray-200 w-80 transition-all duration-500 ${
+          isOpen ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+        }`}
+      >
         {description}
       </div>
 
       {/* Details Button */}
-      <div className="absolute left-7 bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-500 text-white bg-regal-blue font-semibold text-[15px] rounded-tl-2xl rounded-br-2xl py-[6px] px-[20px] hover:shadow-2xl hover:bg-regal-hover tracking-wide">
+      <div
+        className={`absolute left-7 bottom-0 text-white bg-regal-blue font-semibold text-[15px] rounded-tl-2xl rounded-br-2xl py-[6px] px-[20px] hover:shadow-2xl hover:bg-regal-hover tracking-wide transition-all duration-500 ${
+          isOpen ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+        }`}
+      >
         <Link>Details</Link>
       </div>
     </div>
