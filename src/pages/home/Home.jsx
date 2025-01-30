@@ -14,7 +14,7 @@ const Home = () => {
         {/* overly */}
         <div className="mt-[-40px] w-[100%] lg:w-[40%] mb-8 lg:hidden flex  justify-center">
           <div>
-            <img className="rounded-full h-96" src={photo} alt="img" />
+            <img className="rounded-full md:h-96 h-80" src={photo} alt="img" />
           </div>
         </div>
         {/* left */}
