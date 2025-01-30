@@ -8,7 +8,7 @@ import photo from "/public/profile1.jpg"
 
 const Home = () => {
   return (
-    <section>
+    <section className="">
       {/*  */}
       <div className="container w-[90%] mx-auto pt-28 flex justify-between gap-10 mb-14">
         {/* left */}
