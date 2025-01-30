@@ -11,17 +11,17 @@ const Projects = () => {
       {/*  */}
       <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
         {/* top */}
-        <div className="w-[60%] mx-auto text-center flex flex-col justify-center items-center gap-3">
+        <div className="md:w-[60%] w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
           <h1 className="text-4xl text-center font-semibold text-regal-blue">
             My Projects
           </h1>
-          <div className="bg-[#5c7bf87f] w-[10%] h-1 rounded-2xl"></div>
-          <p className="text-sm text-regal-gray">
+          <div className="bg-[#5c7bf87f] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
+          <p className="text-sm lg:text-base text-regal-gray">
             Here are the top projects that I have done or am doing:
           </p>
         </div>
         {/* upper */}
-        <div className='flex items-center justify-between w-full gap-10'>
+        <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-10">
           {/* project1 */}
           <div className="group relative overflow-hidden w-[384px] rounded-2xl ">
             {/* overploy */}

@@ -6,12 +6,12 @@ const Skills = () => {
       {/*  */}
       <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
         {/* left */}
-        <div className="w-[60%] mx-auto text-center flex flex-col justify-center items-center gap-3">
-          <h1 className="text-4xl text-center font-semibold text-regal-blue">
+        <div className="md:w-[60%] w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
+          <h1 className="text-[24px] md:text-4xl text-center font-semibold text-regal-blue">
             Skills & Familiarity
           </h1>
-          <div className="bg-[#5c7bf87f] w-[10%] h-1 rounded-2xl"></div>
-          <p className="text-sm text-regal-gray">
+          <div className="bg-[#5c7bf87f] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
+          <p className="text-sm lg:text-base text-regal-gray">
             Below is the list of skills and technologies that I have used until
             now. The assumptions are made based on my thinking and confidence.
           </p>

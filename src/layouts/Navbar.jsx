@@ -5,10 +5,24 @@ import { FaX } from "react-icons/fa6";
 
 import { Link } from 'react-router-dom';
 import photo from '/public/logo.png'
+import { useEffect } from 'react';
 
 const Navbar = () => {
 
   const [bar, setBar] =useState(<FaBars />)
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [])
 
   const links = (
     <ul
@@ -34,8 +48,14 @@ const Navbar = () => {
   );
 
   return (
-    <nav>
-      <div className="container w-[90%] mx-auto py-[20px] relative flex items-center justify-between">
+    <nav
+      className={`fixed w-full ${
+        isScrolled && "border-b-1 border-b-gray-300 z-50 bg-[#FFFFFF]"
+      }`}
+    >
+      <div
+        className={`container w-[90%] mx-auto py-[14px] relative flex items-center justify-between`}
+      >
         <a href="#home">
           <img src={photo} alt="logo" className="w-[80%]" />
         </a>

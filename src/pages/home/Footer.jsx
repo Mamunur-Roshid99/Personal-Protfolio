@@ -10,11 +10,11 @@ const Footer = () => {
   return (
     <footer className="bg-[#F8F9FF]">
       {/*  */}
-      <div className="container w-[90%] mx-auto py-3 flex items-center justify-between">
+      <div className="container w-[90%] mx-auto py-3 flex gap-6 flex-col md:flex-row items-center justify-between">
         {/* left */}
         <div className="flex items-center gap-3">
           <img src={photo} alt="logo" className="w-[15%]" />
-          <p className="text-[15px]">
+          <p className="md:text-[15px] text-sm">
             Copyright © 2025 - All right reserved by Mamunur Roshid
           </p>
         </div>

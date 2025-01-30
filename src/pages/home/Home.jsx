@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <section className="">
       {/*  */}
-      <div className="container w-[90%] mx-auto pt-28 lg:flex justify-between gap-10 mb-14">
+      <div className="container w-[90%] mx-auto pt-52 lg:flex justify-between gap-10 mb-14">
         {/* overly */}
         <div className="mt-[-40px] w-[100%] lg:w-[40%] mb-8 lg:hidden flex  justify-center">
           <div>
