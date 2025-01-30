@@ -1,45 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import img1 from "/public/Untitled-1.jpg";
 import img2 from "/public/Untitled-2.jpg";
 import img3 from "/public/Untitled-3.jpg";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ title, image, description }) => {
-  const [showText, setShowText] = useState(false);
-
   return (
-    <div
-      className="group relative overflow-hidden w-[384px] rounded-2xl cursor-pointer"
-      onClick={() => setShowText(!showText)}
-    >
+    <div className="relative overflow-hidden w-[384px] rounded-2xl cursor-pointer group">
       {/* Overlay */}
-      <div className="group-hover:opacity-60 group-hover:bg-[#4D5360] absolute w-full h-full z-40 transition-all duration-500"></div>
+      <div className="absolute w-full h-full bg-[#4D5360] opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
 
       {/* Image */}
       <img src={image} alt={title} className="w-full h-full object-cover" />
 
       {/* Title */}
-      <div className="absolute left-7 -bottom-full group-hover:bottom-36 z-50 text-amber-200 transition-all duration-500 font-bold text-2xl">
+      <div className="absolute left-7 bottom-5 opacity-0 group-hover:opacity-100 transition-all duration-500 text-amber-200 font-bold text-2xl">
         {title}
       </div>
 
       {/* Description */}
-      <div className="absolute left-7 -bottom-full group-hover:bottom-24 text-sm z-50 text-gray-200 transition-all duration-500 w-80">
+      <div className="absolute left-7 bottom-2 opacity-0 group-hover:opacity-100 transition-all duration-500 text-sm text-gray-200 w-80">
         {description}
       </div>
 
       {/* Details Button */}
-      <div className="absolute left-7 -bottom-full group-hover:bottom-[50px] z-50 text-white bg-regal-blue transition-all duration-500 font-semibold text-[15px] rounded-tl-2xl rounded-br-2xl rounded-sm py-[6px] px-[20px] hover:shadow-2xl hover:bg-regal-hover tracking-wide">
+      <div className="absolute left-7 bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-500 text-white bg-regal-blue font-semibold text-[15px] rounded-tl-2xl rounded-br-2xl py-[6px] px-[20px] hover:shadow-2xl hover:bg-regal-hover tracking-wide">
         <Link>Details</Link>
       </div>
-
-      {/* Mobile Click Effect */}
-      {showText && (
-        <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-start justify-center p-6">
-          <h2 className="text-amber-200 font-bold text-2xl">{title}</h2>
-          <p className="text-gray-200 text-sm mt-2">{description}</p>
-        </div>
-      )}
     </div>
   );
 };
