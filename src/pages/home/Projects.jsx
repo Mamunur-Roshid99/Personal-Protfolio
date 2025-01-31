@@ -4,6 +4,8 @@ import img1 from "/public/Untitled-1.jpg";
 import img2 from "/public/Untitled-2.jpg";
 import img3 from "/public/Untitled-3.jpg";
 
+import './project.css'
+
 import { Link } from "react-router-dom";
 const Projects = () => {
   return (
@@ -23,23 +25,14 @@ const Projects = () => {
         {/* upper */}
         <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-10">
           {/* project1 */}
-          <div className="group relative overflow-hidden w-[384px] rounded-2xl ">
-            {/* overploy */}
-            <div className="group-hover:opacity-60 group-hover:bg-[#4D5360] absolute w-full h-full z-40 transition-all duration-500"></div>
-            {/* img */}
-            <img src={img1} alt="project1" />
-            {/* title */}
-            <div className="absolute left-7 -bottom-full group-hover:bottom-36 z-50 text-amber-200 transition-all duration-500 font-bold text-2xl">
-              Airbnb Clone Website
-            </div>
-            {/* description */}
-            <div className="absolute left-7 -bottom-full group-hover:bottom-24 text-sm z-50 text-gray-200 transition-all duration-500 w-80">
-              This is an Airbnb Clone Project. Still, we are working on this
-              project. Here, an a...
-            </div>
-            {/* details */}
-            <div className="absolute left-7 -bottom-full group-hover:bottom-[50px] z-50 text-white bg-regal-blue transition-all duration-500 font-semibold text-[15px] rounded-tl-2xl rounded-br-2xl rounded-sm py-[6px] px-[20px] hover:shadow-2xl hover:bg-regal-hover tracking-wide">
-              <Link>Details</Link>
+          <div className="image">
+            <img className="image__img" src={img1} alt="website" />
+            <div className="image__overlay image__overlay--primary">
+              <h3 className="title-color fw-bold">className</h3>
+              <p className="subTitle-color"><details></details>...</p>
+              <Link className="btn myMenu3 ms-0" to={`/details`}>
+                Details
+              </Link>
             </div>
           </div>
           {/* project2 */}
