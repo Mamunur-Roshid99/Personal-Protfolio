@@ -6,9 +6,10 @@ import img3 from "/public/Untitled-3.jpg";
 
 import './project.css'
 
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const ProjectCard = ({ title, image, description }) => {
+const ProjectCard = ({ id, title, image, description }) => {
+
   return (
     <div className="image">
       <img className="image__img" src={image} alt="website" />
@@ -16,10 +17,8 @@ const ProjectCard = ({ title, image, description }) => {
         <h3 className="title-color fw-bold text-regal-blue font-bold text-2xl">
           {title}
         </h3>
-        <p className="subTitle-color text-sm text-gray-300">
-          {description}
-        </p>
-        <Link className="btn myMenu3 ms-0" to={`/details`}>
+        <p className="subTitle-color text-sm text-gray-300">{description}</p>
+        <Link className="btn myMenu3 ms-0" to={`/details${id}`}>
           Details
         </Link>
       </div>
@@ -31,18 +30,21 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 1,
       title: "Airbnb Clone Website",
       image: img1,
       description:
         "This is an Airbnb Clone Project. Still, we are working on this project.",
     },
     {
+      id: 2,
       title: "Lending Page Design",
       image: img2,
       description:
         "This is a Lending page design project. We are still working on this.",
     },
     {
+      id: 3,
       title: "Traveling Website",
       image: img3,
       description:

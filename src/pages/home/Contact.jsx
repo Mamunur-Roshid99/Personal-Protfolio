@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import { FaCheck } from "react-icons/fa";
 
 const Contact = () => {
+
+  const [popup, setPopup] = useState(false)
+
+  const handleSend =() => {
+    setPopup(!popup)
+  }
+
   return (
     <section className="bg-[#F8F9FF] border-b-1 border-b-gray-300">
       {/*  */}
@@ -47,16 +56,31 @@ const Contact = () => {
               </label>
               <textarea
                 name="mssage"
-                placeholder="Type your message"
+                placeholder="Type your message" required
                 className="border-b-1 text-sm py-2 focus:outline-none focus:border-b-regal-skyblue border-regal-black"
               ></textarea>
             </div>
-            <a
-              href="#"
+            <button
+              onClick={handleSend}
               className="bg-regal-blue text-center text-white font-semibold text-[15px] rounded-3xl py-[10px] px-[30px] hover:shadow-2xl duration-300 hover:bg-regal-hover tracking-wide cu"
             >
               Send
-            </a>
+            </button>
+            {popup && (
+              <div className="fixed top-0 left-0 w-full h-full  flex justify-center items-center">
+                <div className="bg-white p-10 w-[300px] flex items-center justify-center flex-col gap-2 rounded-lg shadow-lg">
+                  <FaCheck className='text-5xl text-green-400' />
+                  <h2 className="text-xl font-semibold text-regal-blue">
+                    Great!
+                  </h2>
+                  <p className="text-sm">Message sent successfully !!</p>
+                  <button
+                    onClick={() => setPopup(false)}
+                    className="bg-regal-blue text-white font-semibold text-[15px] rounded-3xl py-[10px] px-[30px] hover:shadow-2xl duration-300 hover:bg-regal-hover tracking-wide"
+                  >ok</button>
+                </div>
+              </div>
+            )}
           </div>
         </form>
       </div>

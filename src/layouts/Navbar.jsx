@@ -29,20 +29,17 @@ const Navbar = () => {
       className={`${
         bar
           ? "hidden"
-          : "block absolute -bottom-[137px] bg-[#F8F9FF] flex flex-col gap-3 w-full"
-      } lg:flex items-center justify-center lg:gap-11 font-medium text-[17px] text-regal-black`}
+          : "block absolute -bottom-[100px] bg-[#F8F9FF] flex flex-col gap-3 w-full"
+      } lg:flex items-center justify-center lg:gap-11 font-medium text-[17px] lg:text-[18px] text-regal-black`}
     >
       <Link to="/" className={"hover:text-regal-blue duration-300"}>
         Home
       </Link>
-      <Link to="/about" className={"hover:text-regal-blue duration-300"}>
-        About Me
-      </Link>
       <Link to="/projects" className={"hover:text-regal-blue duration-300"}>
         Projects
       </Link>
-      <Link to="/contact" className={"hover:text-regal-blue duration-300"}>
-        Contact
+      <Link to="/about" className={"hover:text-regal-blue duration-300"}>
+        About
       </Link>
     </ul>
   );
