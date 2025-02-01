@@ -65,12 +65,10 @@ const Projects = () => {
           </p>
         </div>
         {/* upper */}
-        <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-10">
-          {
-            projects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
-            ))
-          }
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full lg:gap-14 gap-10">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </div>
       </div>
     </section>

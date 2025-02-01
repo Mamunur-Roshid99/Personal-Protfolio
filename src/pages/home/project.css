@@ -5,6 +5,18 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+    .image {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .image {
+        width: 384px;
+    }
+}
+
 .image__img {
     display: block;
     border-radius: 30px;

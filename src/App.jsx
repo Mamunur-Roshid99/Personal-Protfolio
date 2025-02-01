@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './layouts/Navbar';
 import Index from './pages/home/Index';
 import About from './components/About';
+import AllProject from './components/AllProject';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<AllProject />} />
         </Routes>
       </BrowserRouter>
     </>
