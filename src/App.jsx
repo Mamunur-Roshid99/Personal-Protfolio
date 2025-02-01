@@ -3,6 +3,7 @@ import './App.css'
 
 import Navbar from './layouts/Navbar';
 import Index from './pages/home/Index';
+import About from './components/About';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </>
