@@ -46,14 +46,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full ${
+      className={`fixed w-full z-50 ${
         isScrolled && "border-b-1 border-b-gray-300 z-50 bg-[#FFFFFF]"
       }`}
     >
       <div
         className={`container w-[90%] mx-auto py-[14px] relative flex items-center justify-between`}
       >
-        <a href="#home">
+        <a href="#">
           <img src={photo} alt="logo" className="w-[80%]" />
         </a>
 

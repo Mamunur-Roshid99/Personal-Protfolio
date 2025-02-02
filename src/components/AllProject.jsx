@@ -34,31 +34,29 @@ const AllProject = () => {
     const projects = [
       {
         id: 1,
-        title: "Airbnb Clone Website",
+        title: "Travel Agency Website",
         image: img1,
         description:
-          "This is an Airbnb Clone Project. Still, we are working on this project.",
+          "This is an Travel Agency Website. Still, we are working on this project.",
       },
       {
         id: 2,
-        title: "Lending Page Design",
+        title: "Comfea",
         image: img2,
-        description:
-          "This is a Lending page design project. We are still working on this.",
+        description: "This is a Comfea project. We are still working on this.",
       },
       {
         id: 3,
-        title: "Traveling Website",
+        title: "Nexcent",
         image: img3,
-        description:
-          "This is a Traveling Website Project. More features coming soon.",
+        description: "This is a Nexcent Project. We are still working on this.",
       },
       {
         id: 4,
-        title: "Traveling Website",
+        title: "Airbnb Clone Website",
         image: img4,
         description:
-          "This is a Traveling Website Project. More features coming soon.",
+          "This is a Airbnb Clone Website. We are still working on this.",
       },
     ];
 

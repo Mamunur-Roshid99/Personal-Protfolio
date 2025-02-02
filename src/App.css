@@ -13,3 +13,17 @@ body {
   font-family: var(--font-display);
   background-color: #FFFFFF;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 15s linear infinite alternate;
+}
