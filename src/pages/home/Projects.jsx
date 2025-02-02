@@ -6,7 +6,7 @@ import img3 from "/public/Untitled-3.jpg";
 
 import './project.css'
 
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ id, title, image, description }) => {
 
