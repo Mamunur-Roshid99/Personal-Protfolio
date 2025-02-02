@@ -2,9 +2,11 @@ import React from 'react'
 
 import "../pages/home/project.css"
 
-import img1 from "/public/Untitled-1.jpg";
-import img2 from "/public/Untitled-2.jpg";
-import img3 from "/public/Untitled-3.jpg";
+import img1 from "/public/project1.png";
+import img2 from "/public/project2.png";
+import img3 from "/public/project3.png";
+import img4 from "/public/project4.png";
+
 import { Link } from 'react-router-dom';
 import Footer from '../pages/home/Footer';
 
@@ -54,7 +56,7 @@ const AllProject = () => {
       {
         id: 4,
         title: "Traveling Website",
-        image: img3,
+        image: img4,
         description:
           "This is a Traveling Website Project. More features coming soon.",
       },

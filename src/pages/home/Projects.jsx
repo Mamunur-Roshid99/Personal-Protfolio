@@ -1,8 +1,8 @@
 import React from "react";
 
-import img1 from "/public/Untitled-1.jpg";
-import img2 from "/public/Untitled-2.jpg";
-import img3 from "/public/Untitled-3.jpg";
+import img1 from "/public/project1.png";
+import img2 from "/public/project2.png";
+import img3 from "/public/project3.png";
 
 import './project.css'
 
