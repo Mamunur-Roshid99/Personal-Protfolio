@@ -13,7 +13,8 @@
 
 @media only screen and (max-width: 640px) {
     .image {
-        width: 384px;
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
