@@ -3,6 +3,7 @@ import React from "react";
 import img1 from "/public/project1.png";
 import img2 from "/public/project2.png";
 import img3 from "/public/project3.png";
+import img4 from "/public/project6.png";
 
 import './project.css'
 
@@ -46,8 +47,14 @@ const Projects = () => {
       id: 3,
       title: "Nexcent",
       image: img3,
+      description: "This is a Nexcent Project. We are still working on this.",
+    },
+    {
+      id: 4,
+      title: "News Website",
+      image: img4,
       description:
-        "This is a Nexcent Project. We are still working on this.",
+        "This is a News Website Project. We are still working on this.",
     },
   ];
 

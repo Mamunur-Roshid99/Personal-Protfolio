@@ -5,7 +5,8 @@ import "../pages/home/project.css"
 import img1 from "/public/project1.png";
 import img2 from "/public/project2.png";
 import img3 from "/public/project3.png";
-import img4 from "/public/project4.png";
+import img4 from "/public/project6.png";
+import img5 from "/public/project4.png";
 
 import { Link } from 'react-router-dom';
 import Footer from '../pages/home/Footer';
@@ -53,8 +54,15 @@ const AllProject = () => {
       },
       {
         id: 4,
-        title: "Airbnb Clone Website",
+        title: "News Website",
         image: img4,
+        description:
+          "This is a News Website Project. We are still working on this.",
+      },
+      {
+        id: 5,
+        title: "Airbnb Clone Website",
+        image: img5,
         description:
           "This is a Airbnb Clone Website. We are still working on this.",
       },

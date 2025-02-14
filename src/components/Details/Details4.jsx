@@ -2,7 +2,7 @@ import React from 'react'
 
 import Footer from '../../pages/home/Footer';
 
-import img1 from "/public/details4.png";
+import img1 from "/public/details5.png";
 
 const Details4 = () => {
   return (
@@ -21,7 +21,7 @@ const Details4 = () => {
           <div className="mt-2 lg:mt-20 lg:w-[45%] text-center flex flex-col gap-3">
             <div className="md:w-[60%] lg:w-full w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
               <h1 className="text-[25px] md:text-3xl lg:text-4xl text-center font-semibold text-regal-blue">
-                Airbnb Clone Website
+                News Website
               </h1>
               <div className="bg-[#5c7bf87f] lg:w-[20%] lg:mt-3 w-[30%] h-1 rounded-2xl"></div>
             </div>
@@ -29,25 +29,25 @@ const Details4 = () => {
               Project Details:
             </p>
             <p className="text-base md:text-xl lg:text-base text-regal-gray">
-              This was a project I did for a travel agency. I used HTML,
-              Tailwind CSS to create a responsive website.
+              This was a project I did for a News Website. I used HTML, Tailwind
+              CSS and React.js to create a responsive website.
             </p>
             <p className="text-xl md:text-[23px] font-medium text-gray-700">
               Technology:
             </p>
             <p className="text-base md:text-xl lg:text-base lg:-mt-0 text-regal-gray -mt-3">
-              HTML, Tailwind CSS
+              HTML, Tailwind CSS and React.js
             </p>
             <div className="mt-5 w-[90%] md:w-[50%] lg:w-[60%] mx-auto flex items-center justify-center gap-5">
               <a
-                href="https://mamunur-roshid99.github.io/Airbnb-landing-page-clone/"
+                href="https://github.com/Mamunur-Roshid99/News-Website"
                 target="_blank"
                 className="myMenu3"
               >
                 Live
               </a>
               <a
-                href="https://github.com/Mamunur-Roshid99/Airbnb-landing-page-clone"
+                href="https://github.com/Mamunur-Roshid99/News-Website"
                 target="_blank"
                 className="myMenu3"
               >

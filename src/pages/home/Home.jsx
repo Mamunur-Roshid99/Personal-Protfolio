@@ -1,5 +1,8 @@
 import React from "react";
 
+// motion
+import {motion} from 'framer-motion'
+
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";

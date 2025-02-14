@@ -9,6 +9,7 @@ import Details1 from './components/Details/Details1';
 import Details2 from './components/Details/Details2';
 import Details3 from './components/Details/Details3';
 import Details4 from './components/Details/Details4';
+import Details5 from "./components/Details/Details5";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/details2" element={<Details2 />} />
           <Route path="/details3" element={<Details3 />} />
           <Route path="/details4" element={<Details4 />} />
+          <Route path="/details5" element={<Details5 />} />
         </Routes>
       </BrowserRouter>
     </>

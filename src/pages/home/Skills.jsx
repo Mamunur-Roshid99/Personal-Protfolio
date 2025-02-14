@@ -17,7 +17,7 @@ const Skills = () => {
           </p>
         </div>
         {/* right */}
-        <div className='mx-4 flex justify-center flex-wrap gap-5'>
+        <div className="mx-4 flex justify-center flex-wrap gap-5">
           {/* html */}
           <div className="bg-white size-52 flex flex-col items-center justify-center gap-1.5 shadow-2xs hover:scale-105 duration-300">
             <img
