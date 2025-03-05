@@ -10,6 +10,18 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- emailjs script add -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "RQ97_MTR5qM_KgR0x",
+        });
+      })();
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
