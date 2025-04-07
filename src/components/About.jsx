@@ -28,51 +28,54 @@ const About = () => {
             {/* left */}
             <div className="w-[100%] flex items-center justify-center">
               <div>
-                <img src={Photo} className='rounded-2xl' alt="profile" />
+                <img src={Photo} className="rounded-2xl" alt="profile" />
               </div>
             </div>
             {/* right */}
             <div className="w-[100%] flex flex-col gap-8">
-              <p className='text-gray-600 text-sm md:text-[18px]'>
-                👋 Hi, I'm <b>Mamunur Roshid Anas</b>, a 18-year-old Front-End
-                Developer with a passion for crafting modern and responsive web
-                applications. I specialize in ReactJS & TailwindCSS, focusing on
-                building sleek, efficient, and user-friendly digital
-                experiences. I love learning new technologies, solving problems,
-                and writing clean, maintainable code. My goal is to turn
-                creative ideas into reality through innovative and efficient
-                development. Let's connect and create something amazing! 🚀
+              <p className="text-gray-600 text-sm md:text-[18px]">
+                👋 Hey there! I'm <b>Mamunur Roshid Anas</b>, an 18-year-old
+                MERN Stack Developer with a passion for building full-stack web
+                applications that are fast, scalable, and user-centric. <br />I
+                specialize in MongoDB, Express.js, React.js, and Node.js,
+                creating seamless and responsive digital solutions — from sleek
+                front-end interfaces to powerful back-end APIs. I love turning
+                complex problems into simple, elegant code. <br /> 🔧 Whether it’s
+                building modern UIs with React & TailwindCSS, or designing
+                RESTful APIs and managing databases, I thrive on solving
+                challenges and learning new technologies along the way. <br /> 🚀 Let’s
+                build something impactful together!
               </p>
               <div className="flex items-center gap-3 lg:text-xl text-2xl text-white">
-                    <a
-                    href="https://github.com/Mamunur-Roshid99"
-                    target="_blank"
-                    className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
-                    >
-                    <FaGithub />
-                    </a>
-                    <a
-                    href="https://www.linkedin.com/in/mamunur-roshid99/"
-                    target="_blank"
-                    className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
-                    >
-                    <FaLinkedin />
-                    </a>
-                    <a
-                    href="https://www.facebook.com/mamunur.roshid.655427"
-                    target="_blank"
-                    className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
-                    >
-                    <FaFacebook />
-                    </a>
-                    <a
-                    href="https://www.instagram.com/mamunur_roshid12/"
-                    target="_blank"
-                    className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
-                    >
-                    <FaInstagram />
-                    </a>
-                </div>
+                <a
+                  href="https://github.com/Mamunur-Roshid99"
+                  target="_blank"
+                  className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mamunur-roshid99/"
+                  target="_blank"
+                  className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  href="https://www.facebook.com/mamunur.roshid.655427"
+                  target="_blank"
+                  className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
+                >
+                  <FaFacebook />
+                </a>
+                <a
+                  href="https://www.instagram.com/mamunur_roshid12/"
+                  target="_blank"
+                  className="bg-regal-blue p-2 rounded-full hover:shadow-2xl duration-300 hover:bg-regal-hover"
+                >
+                  <FaInstagram />
+                </a>
+              </div>
             </div>
           </div>
         </div>

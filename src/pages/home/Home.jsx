@@ -1,7 +1,6 @@
 import React from "react";
 
-// motion
-import {motion} from 'framer-motion'
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
@@ -10,6 +9,12 @@ import { FaInstagram } from "react-icons/fa6";
 import photo from "/public/profile1.jpg"
 
 const Home = () => {
+
+  const [text] = useTypewriter({
+    words: ["Front-End Developer", "React-Js Developer", "Mern-Stack Developer"],
+    loop: {},
+  })
+
   return (
     <section className="">
       {/*  */}
@@ -26,8 +31,9 @@ const Home = () => {
             Hey There 👋 I am
           </h5>
           <h2 className="font-semibold text-4xl md:text-5xl">Mamunur Roshid</h2>
-          <p className="text-[18px] font-medium text-regal-gray">
-            I am a <span className="text-regal-blue">Front-End Developer</span>
+          <p className="text-[18px] lg:text-2xl font-medium text-regal-gray">
+            I am <span className="text-regal-blue">{text}</span>
+            <span className="text-regal-blue"><Cursor></Cursor></span>
           </p>
           <p className="text-sm md:text-base text-regal-black tracking-wide">
             I am a Junior Front End Developer, passionate about creating
