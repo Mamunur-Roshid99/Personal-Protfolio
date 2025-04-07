@@ -61,8 +61,8 @@ const Navbar = () => {
 
         <a
           className="bg-regal-blue text-white font-semibold text-[11px] rounded-3xl py-[10px] px-[30px] hover:shadow-2xl duration-300 hover:bg-regal-hover tracking-wide md:text-[15px]"
-          href="/public/Mamunur_Roshid_Resume.pdf"
-          download={"Mamunur Roshid Resume"}
+          href="https://drive.google.com/file/d/18e6hubZlyCTzOTBru9qrlCKVJlO4uIiu/view?usp=drive_link"
+          target='_blank'
         >
           Download CV
         </a>
