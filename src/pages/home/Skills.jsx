@@ -11,10 +11,6 @@ const skillsData = {
       name: "Tailwind CSS",
       img: "https://i.ibb.co/Y3Cz4Cx/tailwind-0ab529d8.png",
     },
-    {
-      name: "Bootstrap",
-      img: "https://i.ibb.co/x8kN08J/bootstrap-ff4ba441ec3324145fde.png",
-    },
   ],
   Backend: [
     {
