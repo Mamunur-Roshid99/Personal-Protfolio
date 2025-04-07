@@ -1,6 +1,43 @@
-import React from 'react'
+import { button, div } from 'framer-motion/client';
+import React, { useState } from 'react'
+
+const skillsData = {
+  Frontend: [
+    { name: "HTML", img: "https://i.ibb.co/HPwNMnc/html-5132b1f6.png" },
+    { name: "CSS", img: "https://i.ibb.co/Ch52yML/css-7c2f7af3.png" },
+    { name: "JavaScript", img: "https://i.ibb.co/SvHdfrH/js-6b71920c.png" },
+    { name: "React", img: "https://i.ibb.co/X3rPmcR/react-462ddb5a.png" },
+    {
+      name: "Tailwind CSS",
+      img: "https://i.ibb.co/Y3Cz4Cx/tailwind-0ab529d8.png",
+    },
+    {
+      name: "Bootstrap",
+      img: "https://i.ibb.co/x8kN08J/bootstrap-ff4ba441ec3324145fde.png",
+    },
+  ],
+  Backend: [
+    {
+      name: "Node.js",
+      img: "https://www.nazmussakib.dev/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fduuwqmunp%2Fimage%2Fupload%2Fv1726062862%2Fundefined-1726062859219.png&w=256&q=75",
+    },
+    {
+      name: "Express.js",
+      img: "https://www.nazmussakib.dev/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fduuwqmunp%2Fimage%2Fupload%2Fv1726062849%2Fundefined-1726062846796.png&w=256&q=75",
+    },
+  ],
+  Database: [
+    {
+      name: "MongoDB",
+      img: "https://www.nazmussakib.dev/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fduuwqmunp%2Fimage%2Fupload%2Fv1726062831%2Fundefined-1726062829048.png&w=256&q=75",
+    },
+  ],
+};               
 
 const Skills = () => {
+
+  const [activeTab, setActiveTab] = useState("Frontend");
+
   return (
     <section className="bg-[#F8F9FF]">
       {/*  */}
@@ -17,60 +54,34 @@ const Skills = () => {
           </p>
         </div>
         {/* right */}
-        <div className="mx-4 flex justify-center flex-wrap gap-5">
-          {/* html */}
-          <div className="bg-white size-52 flex flex-col items-center justify-center gap-1.5 shadow-2xs hover:scale-105 duration-300">
-            <img
-              src="https://i.ibb.co/HPwNMnc/html-5132b1f6.png"
-              alt="html"
-              className="size-24"
-            />
-            <h3 className="font-semibold text-xl">HTML</h3>
+        <div className=" flex flex-col md:flex-row gap-10 md:gap-0">
+          {/* button */}
+          <div className="flex items-center justify-between md:flex-col md:gap-10 md:w-[30%] md:items-start md:h-80 md:border-r-2 border-r-gray-400">
+            {["Frontend", "Backend", "Database"].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`font-semibold text-[12px] rounded-3xl py-[10px] px-[30px] md:size-72 tracking-wide md:text-[25px] transition-all duration-200 capitalize ${
+                  activeTab === tab
+                    ? "bg-regal-blue text-white hover:shadow-2xl duration-300 hover:bg-regal-hover"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
-          {/* css */}
-          <div className="bg-white size-52 flex flex-col items-center justify-center gap-1.5 shadow-2xs hover:scale-105 duration-300">
-            <img
-              src="http://i.ibb.co/Ch52yML/css-7c2f7af3.png"
-              alt="css"
-              className="size-24"
-            />
-            <h3 className="font-semibold text-xl">CSS</h3>
-          </div>
-          {/* js */}
-          <div className="bg-white size-52 flex flex-col items-center justify-center gap-1.5 shadow-2xs hover:scale-105 duration-300">
-            <img
-              src="https://i.ibb.co/SvHdfrH/js-6b71920c.png"
-              alt="js"
-              className="size-24"
-            />
-            <h3 className="font-semibold text-xl">JavaScript</h3>
-          </div>
-          {/* react */}
-          <div className="bg-white size-52 flex flex-col items-center justify-center gap-1.5 shadow-2xs hover:scale-105 duration-300">
-            <img
-              src="https://i.ibb.co/X3rPmcR/react-462ddb5a.png"
-              alt="react"
-              className="size-24"
-            />
-            <h3 className="font-semibold text-xl">React</h3>
-          </div>
-          {/* tailwind css */}
-          <div className="bg-white size-52 flex flex-col items-center justify-center gap-1.5 shadow-2xs hover:scale-105 duration-300">
-            <img
-              src="https://i.ibb.co/Y3Cz4Cx/tailwind-0ab529d8.png"
-              alt="tailwind css"
-              className="size-24"
-            />
-            <h3 className="font-semibold text-xl">Tailwind CSS</h3>
-          </div>
-          {/* bootstrap */}
-          <div className="bg-white size-52 flex flex-col items-center justify-center gap-1.5 shadow-2xs hover:scale-105 duration-300">
-            <img
-              src="https://i.ibb.co/x8kN08J/bootstrap-ff4ba441ec3324145fde.png"
-              alt="bootstrap"
-              className="size-24"
-            />
-            <h3 className="font-semibold text-xl">Bootstrap</h3>
+          {/* skill */}
+          <div className="mx-4 flex justify-center flex-wrap gap-5 md:w-[70%]">
+            {skillsData[activeTab].map((skill, index) => (
+              <div
+                key={index}
+                className="bg-white size-44 flex flex-col items-center justify-center gap-1.5 shadow-2xs hover:scale-105 duration-300"
+              >
+                <img src={skill.img} alt={skill.name} className="size-20" />
+                <h3 className="font-semibold text-xl">{skill.name}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </div>
