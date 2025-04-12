@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import "../pages/home/project.css"
 
@@ -26,27 +26,48 @@ const ProjectCard = ({ id, title, imageUrl, description }) => {
 
 const AllProject = () => {
 
-    const [projects, setProjects] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-      fetch("https://portfolio-api-13s7.onrender.com/projects")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setProjects(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(error);
-        setLoading(false);
-      });
-    }, [])
+const projects = [
+  {
+    id: 1,
+    title: "Travel Agency Website",
+    imageUrl:
+      "https://i.pinimg.com/736x/eb/7a/6f/eb7a6f571264754a1eecf91c6a32fba1.jpg",
+    description:
+      "This was a project I did for a travel agency. I used HTML CSS to create a responsive website.",
+  },
+  {
+    id: 2,
+    title: "Comfea Website",
+    imageUrl:
+      "https://i.pinimg.com/736x/23/93/6b/23936b845fb786059339d48bb3618345.jpg",
+    description:
+      "This was a project I did for a Comfea Website. I used HTML CSS and JavaScript to create a responsive website.",
+  },
+  {
+    id: 3,
+    title: "Nexcent Website",
+    imageUrl:
+      "https://i.pinimg.com/736x/3e/52/58/3e52585767cc17da215c557c17e5d0d5.jpg",
+    description:
+      "This was a project I did for a Nexcent Website. I used HTML, Tailwind CSS, JavaScript and React to create a responsive website.",
+  },
+  {
+    id: 4,
+    title: "News Website",
+    imageUrl:
+      "https://i.pinimg.com/736x/59/36/79/59367941f4d27899f520871e569adf78.jpg",
+    description:
+      "This was a project I did for a News Website. I used HTML, Tailwind CSS and React.js to create a responsive website.",
+  },
+  {
+    id: 5,
+    title: "Airbnb Clone Website",
+    imageUrl:
+      "https://i.pinimg.com/736x/a5/44/a6/a544a645adea1070932b83d64bcfed97.jpg",
+    description:
+      "This was a project I did for a travel agency. I used HTML,Tailwind CSS to create a responsive website.",
+  },
+];
 
   return (
     <section>
@@ -65,7 +86,7 @@ const AllProject = () => {
         {/* down */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full lg:gap-14 gap-10">
           {projects.map((project, index) => (
-            <ProjectCard key={index} loading={loading} error={error} {...project} />
+            <ProjectCard key={index} {...project} />
           ))}
         </div>
       </div>

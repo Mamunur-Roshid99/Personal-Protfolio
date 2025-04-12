@@ -33,7 +33,9 @@ const Home = () => {
           <h2 className="font-semibold text-4xl md:text-5xl">Mamunur Roshid</h2>
           <p className="text-[18px] lg:text-2xl font-medium text-regal-gray">
             I am <span className="text-regal-blue">{text}</span>
-            <span className="text-regal-blue"><Cursor></Cursor></span>
+            <span className="text-regal-blue">
+              <Cursor></Cursor>
+            </span>
           </p>
           <p className="text-sm md:text-base text-regal-black tracking-wide">
             I am a Junior Front End Developer, passionate about creating
