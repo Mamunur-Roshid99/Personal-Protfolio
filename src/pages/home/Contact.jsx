@@ -34,16 +34,14 @@ const Contact = () => {
 
 
   return (
-    <section className="bg-[#F8F9FF] border-b-1 border-b-gray-300">
+    <section className=" border-b-1 border-b-gray-300">
       {/*  */}
       <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
         {/* top */}
         <div className="md:w-[60%] w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
-          <h1 className="text-4xl text-center font-semibold text-regal-blue">
-            Contact Me
-          </h1>
-          <div className="bg-[#5c7bf87f] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
-          <p className="text-sm lg:text-base text-regal-gray">
+          <h1 className="text">Contact Me</h1>
+          <div className="bg-[#11a59b9e] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
+          <p className="text-sm lg:text-base text-[#D1D5DB]">
             You can contact me by the form below or send email to
             web.dev.anas5@gmaill.com
           </p>
@@ -63,7 +61,7 @@ const Contact = () => {
                 type="text"
                 name="user_name"
                 placeholder="Type your name"
-                className="border-b-1 text-sm py-2 focus:outline-none focus:border-b-regal-skyblue border-regal-black"
+                className="border-b-1 text-sm py-2 text-[#D1D5DB] focus:outline-none focus:border-b-[#11A59B] border-regal-black"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -74,7 +72,7 @@ const Contact = () => {
                 type="email"
                 name="user_email"
                 placeholder="Type your email"
-                className="border-b-1 text-sm py-2 focus:outline-none focus:border-b-regal-skyblue border-regal-black"
+                className="border-b-1 text-sm py-2 text-[#D1D5DB] focus:outline-none focus:border-b-[#11A59B] border-regal-black"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -85,14 +83,14 @@ const Contact = () => {
                 name="message"
                 placeholder="Type your message"
                 required
-                className="border-b-1 text-sm py-2 focus:outline-none focus:border-b-regal-skyblue border-regal-black"
+                className="border-b-1 text-sm py-2 text-[#D1D5DB] focus:outline-none focus:border-b-[#11A59B] border-regal-black"
               ></textarea>
             </div>
             <button
               type="submit"
               value="Send"
               onClick={handleSend}
-              className="bg-regal-blue text-center text-white font-semibold text-[15px] rounded-3xl py-[10px] px-[30px] hover:shadow-2xl duration-300 hover:bg-regal-hover tracking-wide cu"
+              className="bg-[#11A59B] text-center text-white font-semibold text-[15px] rounded-3xl py-[10px] px-[30px] hover:shadow-2xl duration-300 hover:bg-[#11a59bd2] tracking-wide"
             >
               Send
             </button>

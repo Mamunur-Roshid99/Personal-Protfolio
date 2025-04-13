@@ -35,16 +35,14 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("Frontend");
 
   return (
-    <section className="bg-[#F8F9FF]">
+    <section className="">
       {/*  */}
-      <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
+      <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14 mb-1">
         {/* left */}
         <div className="md:w-[60%] w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
-          <h1 className="text-[24px] md:text-4xl text-center font-semibold text-regal-blue">
-            Skills & Familiarity
-          </h1>
-          <div className="bg-[#5c7bf87f] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
-          <p className="text-sm lg:text-base text-regal-gray">
+          <h1 className="text">Skills & Familiarity</h1>
+          <div className="bg-[#11a59b9e] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
+          <p className="text-sm lg:text-[15px] text-[#D1D5DB]">
             Below is the list of skills and technologies that I have used until
             now. The assumptions are made based on my thinking and confidence.
           </p>
@@ -57,9 +55,9 @@ const Skills = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`font-semibold text-[12px] rounded-3xl py-[10px] px-[30px] md:size-72 tracking-wide md:text-[25px] transition-all duration-200 capitalize ${
+                className={`font-semibold text-[12px] rounded-3xl py-[10px] px-[30px] lg:size-72 tracking-wide md:text-[25px] transition-all duration-200 capitalize ${
                   activeTab === tab
-                    ? "bg-regal-blue text-white hover:shadow-2xl duration-300 hover:bg-regal-hover"
+                    ? "bg-[#11A59B] text-white hover:shadow-2xl duration-300 hover:bg-[#11a59bd2]"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
@@ -72,7 +70,7 @@ const Skills = () => {
             {skillsData[activeTab].map((skill, index) => (
               <div
                 key={index}
-                className="bg-white size-44 flex flex-col items-center justify-center gap-1.5 shadow-2xs hover:scale-105 duration-300"
+                className="text-white size-44 flex flex-col items-center justify-center gap-1.5 hover:shadow-2xs hover:shadow-[#5EF38C] hover:scale-105 duration-300"
               >
                 <img src={skill.img} alt={skill.name} className="size-20" />
                 <h3 className="font-semibold text-xl">{skill.name}</h3>

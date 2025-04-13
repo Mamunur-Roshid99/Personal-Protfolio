@@ -11,10 +11,12 @@ const ProjectCard = ({ id, title, imageUrl, description }) => {
     <div className="image">
       <img className="image__img" src={imageUrl} alt="website" />
       <div className="image__overlay image__overlay--primary flex flex-col gap-4">
-        <h3 className="title-color fw-bold text-regal-blue font-bold text-2xl">
+        <h3 className="title-color fw-bold text2">
           {title}
         </h3>
-        <p className="subTitle-color text-sm text-gray-300">{description.slice(0, 80)}...</p>
+        <p className="subTitle-color text-sm text-[#D1D5DB]">
+          {description.slice(0, 80)}...
+        </p>
         <Link className="btn myMenu3 ms-0" to={`/details${id}`}>
           Details
         </Link>
@@ -68,11 +70,9 @@ const projects = [
       <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
         {/* top */}
         <div className="md:w-[60%] w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
-          <h1 className="text-4xl text-center font-semibold text-regal-blue">
-            My Projects
-          </h1>
-          <div className="bg-[#5c7bf87f] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
-          <p className="text-sm lg:text-base text-regal-gray">
+          <h1 className="text">My Projects</h1>
+          <div className="bg-[#11a59b9e] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
+          <p className="text-sm lg:text-base text-[#D1D5DB]">
             Here are the top projects that I have done or am doing:
           </p>
         </div>

@@ -11,10 +11,10 @@ const ProjectCard = ({ id, title, imageUrl, description }) => {
     <div className="image">
       <img className="image__img" src={imageUrl} alt="website" />
       <div className="image__overlay image__overlay--primary flex flex-col gap-4">
-        <h3 className="title-color fw-bold text-regal-blue font-bold text-2xl">
-          {title}
-        </h3>
-        <p className="subTitle-color text-sm text-gray-300">{description.slice(0, 80)}...</p>
+        <h3 className="title-color fw-bold text2">{title}</h3>
+        <p className="subTitle-color text-sm text-[#D1D5DB]">
+          {description.slice(0, 80)}...
+        </p>
         <Link className="btn myMenu3 ms-0" to={`/details${id}`}>
           Details
         </Link>
@@ -74,11 +74,9 @@ const projects = [
       <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
         {/* up */}
         <div className="md:w-[60%] w-[80%] mt-12 mx-auto text-center flex flex-col justify-center items-center gap-3">
-          <h1 className="text-[24px] md:text-3xl text-center font-semibold text-regal-blue">
-            Projects List
-          </h1>
-          <div className="bg-[#5c7bf87f] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
-          <p className="text-sm lg:text-[15px] text-regal-gray">
+          <h1 className="text">Projects List</h1>
+          <div className="bg-[#11a59b9e] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
+          <p className="text-sm lg:text-[15px] text-[#D1D5DB]">
             Here are the projects that I have done throughout my journey in web
             development.
           </p>

@@ -3,15 +3,15 @@
 @theme {
   --font-display: "Poppins", "serif";
   --color-regal-blue: #4769F3;
-  --color-regal-black: #090E34;
+  --color-regal-black: #FFFFFF;
   --color-regal-skyblue: #4A6CF7;
   --color-regal-hover: #5C7AF8;
-  --color-regal-gray: #959CB1;
+  --color-regal-gray: #D1D5DB;
 }
 
 body {
   font-family: var(--font-display);
-  background-color: #FFFFFF;
+  background-image: linear-gradient(to bottom, #171C29);
 }
 
 @keyframes scroll {
@@ -44,4 +44,27 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(126, 105, 171, 0.8);
+}
+
+.text {
+  background: linear-gradient(to right, #5EF38C, #7371AB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 768px) {
+  .text {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .text {
+    font-size: 2rem;
+  }
 }
