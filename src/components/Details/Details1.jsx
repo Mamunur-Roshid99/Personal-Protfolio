@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import '/src/App.css'
 import '/src/pages/home/project.css'
@@ -7,6 +7,11 @@ import img1 from '/public//details1.png'
 import Footer from '../../pages/home/Footer'
 
 const Details1 = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section>

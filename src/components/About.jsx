@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import Photo from '/public/profile2.png'
 
@@ -9,6 +9,11 @@ import { FaInstagram } from "react-icons/fa6";
 import Footer from '../pages/home/Footer';
 
 const About = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section>

@@ -16,7 +16,7 @@ const Home = () => {
   })
 
   return (
-    <section className="">
+    <section id="/">
       {/*  */}
       <div className="container w-[90%] mx-auto pt-52 lg:flex justify-between gap-10 mb-14">
         {/* overly */}

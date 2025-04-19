@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import "../pages/home/project.css"
 
@@ -25,6 +25,10 @@ const ProjectCard = ({ id, title, imageUrl, description }) => {
 
 
 const AllProject = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
 const projects = [
   {
