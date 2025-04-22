@@ -1,36 +1,29 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 
-import { FaCheck } from "react-icons/fa";
-
-import emailjs from "@emailjs/browser";
+import  { FaCheck } from "react-icons/fa";
 
 const Contact = () => {
 
-  const form = useRef();
-
   const [popup, setPopup] = useState(false)
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
 
-  const handleSend =() => {
+  const handleSubmit =(e) => {
+    e.preventDefault();
+
+    const whatsappMessage = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    );
+
+    const whatsappURL = `https://wa.me/8801973671966?text=${whatsappMessage}`;
+    window.open(whatsappURL, "_blank");
+
     setPopup(!popup)
+    setName("")
+    setEmail("")
+    setMessage("")
   }
-
-  // emailjs add
-   const sendEmail = (e) => {
-     e.preventDefault();
-
-     emailjs
-       .sendForm("service_fg0bmpx", "template_tlol61e", form.current, {
-         publicKey: "RQ97_MTR5qM_KgR0x",
-       })
-       .then(
-         () => {
-           console.log("SUCCESS!");
-         },
-         (error) => {
-           console.log("FAILED...", error.text);
-         }
-       );
-   };
 
 
   return (
@@ -48,8 +41,7 @@ const Contact = () => {
         </div>
         {/* form */}
         <form
-          ref={form}
-          onSubmit={sendEmail}
+          onSubmit={handleSubmit}
           className="flex flex-col items-center justify-center"
         >
           <div className="lg:w-[50%] w-[90%] flex flex-col gap-5">
@@ -60,7 +52,10 @@ const Contact = () => {
               <input
                 type="text"
                 name="user_name"
+                required
+                value={name}
                 placeholder="Type your name"
+                onChange={(e) => setName(e.target.value)}
                 className="border-b-1 text-sm py-2 text-[#D1D5DB] focus:outline-none focus:border-b-[#11A59B] border-regal-black"
               />
             </div>
@@ -71,7 +66,10 @@ const Contact = () => {
               <input
                 type="email"
                 name="user_email"
+                required
+                value={email}
                 placeholder="Type your email"
+                onChange={(e) => setEmail(e.target.value)}
                 className="border-b-1 text-sm py-2 text-[#D1D5DB] focus:outline-none focus:border-b-[#11A59B] border-regal-black"
               />
             </div>
@@ -83,13 +81,14 @@ const Contact = () => {
                 name="message"
                 placeholder="Type your message"
                 required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="border-b-1 text-sm py-2 text-[#D1D5DB] focus:outline-none focus:border-b-[#11A59B] border-regal-black"
               ></textarea>
             </div>
             <button
               type="submit"
               value="Send"
-              onClick={handleSend}
               className="bg-[#11A59B] text-center text-white font-semibold text-[15px] rounded-3xl py-[10px] px-[30px] hover:shadow-2xl duration-300 hover:bg-[#11a59bd2] tracking-wide"
             >
               Send
