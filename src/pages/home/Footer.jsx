@@ -8,7 +8,7 @@ import { FaFacebook } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className=" border-t-1 border-t-gray-300">
       {/*  */}
       <div className="container w-[90%] mx-auto py-3 flex gap-6 flex-row items-center justify-between">
         {/* left */}

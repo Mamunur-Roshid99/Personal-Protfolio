@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import photo from "/public/profile1.jpg"
+import gsap from "gsap";
 
 const Home = () => {
 
@@ -15,10 +16,31 @@ const Home = () => {
     loop: {},
   })
 
+  const titleRef = useRef(null)
+
+  useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+      }
+    );
+  }, []);  
+
   return (
     <section id="/">
       {/*  */}
-      <div className="container w-[90%] mx-auto pt-52 lg:flex justify-between gap-10 mb-14">
+      <div
+        ref={titleRef}
+        className="container w-[90%] mx-auto pt-52 lg:flex justify-between gap-10 mb-14"
+      >
         {/* overly */}
         <div className="mt-[-40px] w-[100%] lg:w-[40%] mb-8 lg:hidden flex  justify-center">
           <div>

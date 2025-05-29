@@ -1,21 +1,43 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 
 import '/src/App.css'
 import '/src/pages/home/project.css'
 
 import img1 from '/public//details1.png'
 import Footer from '../../pages/home/Footer'
+import gsap from 'gsap'
 
 const Details1 = () => {
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const titleRef = useRef(null);
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+  
+      gsap.fromTo(
+        titleRef.current,
+        {
+          opacity: 0,
+          y: 30,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }, []);
 
   return (
     <>
       <section>
-        <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14 lg:flex-row lg:justify-between">
+        <div ref={titleRef} className="container w-[90%] mx-auto py-14 flex flex-col gap-14 lg:flex-row lg:justify-between">
           {/* img */}
           <div className="md:w-[100%] lg:w-[55%] w-[80%] mt-20 mx-auto -z-50 relative h-80 md:h-96 shadow-xl rounded-2xl overflow-hidden">
             <img

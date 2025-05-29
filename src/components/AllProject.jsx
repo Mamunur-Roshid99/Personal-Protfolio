@@ -1,9 +1,10 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 
 import "../pages/home/project.css"
 
 import { Link } from 'react-router-dom';
 import Footer from '../pages/home/Footer';
+import gsap from 'gsap';
 
 
 const ProjectCard = ({ id, title, imageUrl, description }) => {
@@ -26,8 +27,29 @@ const ProjectCard = ({ id, title, imageUrl, description }) => {
 
 const AllProject = () => {
 
+  const titleRef = useRef(null)
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    gsap.fromTo(
+      titleRef.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
   }, []);
 
 const projects = [
@@ -75,7 +97,7 @@ const projects = [
 
   return (
     <section>
-      <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
+      <div ref={titleRef} className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
         {/* up */}
         <div className="md:w-[60%] w-[80%] mt-12 mx-auto text-center flex flex-col justify-center items-center gap-3">
           <h1 className="text">Projects List</h1>

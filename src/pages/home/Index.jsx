@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Home from './Home'
 import Skills from './Skills'
@@ -7,6 +7,11 @@ import Contact from './Contact'
 import Footer from './Footer'
 
 const Index = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section>
       <Home />

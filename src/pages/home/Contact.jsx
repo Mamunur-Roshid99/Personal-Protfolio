@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import gsap from 'gsap';
+import React, { useEffect, useRef, useState } from 'react'
 
 import  { FaCheck } from "react-icons/fa";
 
@@ -25,13 +26,36 @@ const Contact = () => {
     setMessage("")
   }
 
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
 
   return (
-    <section className=" border-b-1 border-b-gray-300">
+    <section>
       {/*  */}
       <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
         {/* top */}
-        <div className="md:w-[60%] w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
+        <div ref={titleRef} className="md:w-[60%] w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
           <h1 className="text">Contact Me</h1>
           <div className="bg-[#11a59b9e] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
           <p className="text-sm lg:text-base text-[#D1D5DB]">

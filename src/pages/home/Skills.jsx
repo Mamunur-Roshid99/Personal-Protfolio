@@ -1,5 +1,8 @@
-import { button, div } from 'framer-motion/client';
-import React, { useState } from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+import React, { useEffect, useRef, useState } from 'react'
 
 const skillsData = {
   Frontend: [
@@ -34,12 +37,35 @@ const Skills = () => {
 
   const [activeTab, setActiveTab] = useState("Frontend");
 
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);  
+
   return (
     <section className="">
       {/*  */}
       <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14 mb-1">
         {/* left */}
-        <div className="md:w-[60%] w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
+        <div ref={titleRef} className="md:w-[60%] w-[80%] mx-auto text-center flex flex-col justify-center items-center gap-3">
           <h1 className="text">Skills & Familiarity</h1>
           <div className="bg-[#11a59b9e] lg:w-[10%] w-[30%] h-1 rounded-2xl"></div>
           <p className="text-sm lg:text-[15px] text-[#D1D5DB]">

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 
 import Photo from '/public/profile2.png'
 
@@ -7,17 +7,39 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import Footer from '../pages/home/Footer';
+import gsap from 'gsap';
 
 const About = () => {
 
+  const titleRef = useRef(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    gsap.fromTo(
+      titleRef.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
   }, []);
 
   return (
     <>
       <section>
-        <div className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
+        <div ref={titleRef} className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
           {/* up */}
           <div className="md:w-[60%] w-[80%] mt-12 mx-auto text-center flex flex-col justify-center items-center gap-3">
             <h1 className="text">About Me</h1>

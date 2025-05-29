@@ -10,8 +10,25 @@ import Details2 from './components/Details/Details2';
 import Details3 from './components/Details/Details3';
 import Details4 from './components/Details/Details4';
 import Details5 from "./components/Details/Details5";
+import { useEffect, useState } from 'react';
+import Loader from './components/Loader';
 
 function App() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <>
       <BrowserRouter>
@@ -26,6 +43,7 @@ function App() {
           <Route path="/details4" element={<Details4 />} />
           <Route path="/details5" element={<Details5 />} />
         </Routes>
+        
       </BrowserRouter>
     </>
   );
