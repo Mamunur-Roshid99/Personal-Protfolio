@@ -1,27 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/profile1.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mamunur Roshid's Protfolio</title>
-    <!-- custom fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
 
-    <!-- emailjs script add -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "RQ97_MTR5qM_KgR0x",
-        });
-      })();
-    </script>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/profile1.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mamunur Roshid's Protfolio</title>
+  <!-- custom fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XT096J25X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    gtag('config', 'G-5XT096J25X');
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- emailjs script add -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "RQ97_MTR5qM_KgR0x",
+      });
+    })();
+  </script>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
