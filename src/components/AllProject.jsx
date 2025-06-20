@@ -6,17 +6,66 @@ import { Link } from 'react-router-dom';
 import Footer from '../pages/home/Footer';
 import gsap from 'gsap';
 
+import project1 from "../../public/project1.png";
+import project2 from "../../public/project2.png";
+import project3 from "../../public/project3.png";
+import project4 from "../../public/project4.png";
+import project5 from "../../public/project5.png";
 
-const ProjectCard = ({ id, title, imageUrl, description }) => {
+import details1 from "../../public/details1.png";
+import details2 from "../../public/details2.png";
+import details3 from "../../public/details3.png";
+import details4 from "../../public/details4.png";
+import details5 from "../../public/details5.png";
+
+
+const ProjectCard = ({ id, title, imageUrl, description, index, detailsimg }) => {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const el = cardRef.current;
+
+    gsap.fromTo(
+      el,
+      { opacity: 0, y: 40, scale: 0.95 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.8,
+        delay: index * 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, [index]);
+
   return (
-    <div className="image">
-      <img className="image__img" src={imageUrl} alt="website" />
-      <div className="image__overlay image__overlay--primary flex flex-col gap-4">
-        <h3 className="title-color fw-bold text2">{title}</h3>
+    <div
+      ref={cardRef}
+      className="image transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl rounded-sm overflow-hidden lg:rounded-4xl"
+    >
+      <img
+        className="image__img w-full h-[200px] object-cover rounded-2xl lg:rounded-4xl"
+        src={imageUrl}
+        alt={title}
+      />
+      <div className="image__overlay image__overlay--primary flex flex-col gap-4 p-4 bg-[#000000a6] rounded-2xl lg:rounded-4xl backdrop-blur-md">
+        <h3 className="title-color text-white text-xl font-semibold">
+          {title}
+        </h3>
         <p className="subTitle-color text-sm text-[#D1D5DB]">
           {description.slice(0, 80)}...
         </p>
-        <Link className="btn myMenu3 ms-0" to={`/details${id}`}>
+        <Link
+          className="btn myMenu3 ms-0 bg-[#11a59b] text-white py-2 px-4 rounded hover:bg-[#0f8e88] transition"
+          to={`/details${id}`}
+          state={{ project: { id, title, imageUrl, description, detailsimg } }}
+        >
           Details
         </Link>
       </div>
@@ -55,49 +104,52 @@ const AllProject = () => {
 const projects = [
   {
     id: 1,
-    title: "Travel Agency Website",
-    imageUrl:
-      "https://i.pinimg.com/736x/eb/7a/6f/eb7a6f571264754a1eecf91c6a32fba1.jpg",
+    title: "Admin Dashboard",
+    imageUrl: project1,
     description:
-      "This was a project I did for a travel agency. I used HTML CSS to create a responsive website.",
+      "This was a project I did for a Admin Dashboard. I used React.js & Tailwind CSS to create a responsive website.",
+    detailsimg: details1,
   },
   {
     id: 2,
-    title: "Comfea Website",
-    imageUrl:
-      "https://i.pinimg.com/736x/23/93/6b/23936b845fb786059339d48bb3618345.jpg",
+    title: "Car Website",
+    imageUrl: project2,
     description:
-      "This was a project I did for a Comfea Website. I used HTML CSS and JavaScript to create a responsive website.",
+      "This was a project I did for a Car Website. I used Next.js & Tailwind CSS to create a responsive website.",
+    detailsimg: details2,
   },
   {
     id: 3,
-    title: "Nexcent Website",
-    imageUrl:
-      "https://i.pinimg.com/736x/3e/52/58/3e52585767cc17da215c557c17e5d0d5.jpg",
+    title: "Furniro Website",
+    imageUrl: project3,
     description:
-      "This was a project I did for a Nexcent Website. I used HTML, Tailwind CSS, JavaScript and React to create a responsive website.",
+      "This was a project I did for a Furniro Website. I used React.js & Tailwind CSS to create a responsive website.",
+    detailsimg: details3,
   },
   {
     id: 4,
-    title: "News Website",
-    imageUrl:
-      "https://i.pinimg.com/736x/59/36/79/59367941f4d27899f520871e569adf78.jpg",
+    title: "Intro Card Website",
+    imageUrl: project5,
     description:
-      "This was a project I did for a News Website. I used HTML, Tailwind CSS and React.js to create a responsive website.",
+      "This was a project I did for a Intro Card Website. I used HTML, CSS to create a responsive website.",
+    detailsimg: details5,
   },
   {
     id: 5,
-    title: "Airbnb Clone Website",
-    imageUrl:
-      "https://i.pinimg.com/736x/a5/44/a6/a544a645adea1070932b83d64bcfed97.jpg",
+    title: "Sawyer Website",
+    imageUrl: project4,
     description:
-      "This was a project I did for a travel agency. I used HTML,Tailwind CSS to create a responsive website.",
+      "This was a project I did for a Sawyer Website. I used HTML, CSS and Bootstrap to create a responsive website.",
+    detailsimg: details4,
   },
 ];
 
   return (
     <section>
-      <div ref={titleRef} className="container w-[90%] mx-auto py-14 flex flex-col gap-14">
+      <div
+        ref={titleRef}
+        className="container w-[90%] mx-auto py-14 flex flex-col gap-14"
+      >
         {/* up */}
         <div className="md:w-[60%] w-[80%] mt-12 mx-auto text-center flex flex-col justify-center items-center gap-3">
           <h1 className="text">Projects List</h1>
@@ -108,7 +160,7 @@ const projects = [
           </p>
         </div>
         {/* down */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full lg:gap-14 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full lg:gap-4 gap-10">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

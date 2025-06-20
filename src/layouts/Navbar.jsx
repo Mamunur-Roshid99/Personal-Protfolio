@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import photo from '/public/logo.png'
 import { useEffect } from 'react';
 
+import Magnet from '../../animation/Magnet/Magnet'
+
 const Navbar = () => {
 
   const [bar, setBar] =useState(<FaBars />)
@@ -34,14 +36,23 @@ const Navbar = () => {
     >
       <Link
         to="/"
+        onClick={() => setBar(true)}
         className={"text-white hover:text-[#5EF38C] duration-300"}
       >
         Home
       </Link>
-      <Link to="/projects" className={"text-white hover:text-[#5EF38C] duration-300"}>
+      <Link
+        to="/projects"
+        onClick={() => setBar(true)}
+        className={"text-white hover:text-[#5EF38C] duration-300"}
+      >
         Projects
       </Link>
-      <Link to="/about" className={"text-white hover:text-[#5EF38C] duration-300"}>
+      <Link
+        to="/about"
+        onClick={() => setBar(true)}
+        className={"text-white hover:text-[#5EF38C] duration-300"}
+      >
         About
       </Link>
     </ul>
@@ -64,13 +75,15 @@ const Navbar = () => {
 
         {links}
 
-        <a
-          className="bg-[#11A59B] text-white font-semibold text-[11px] rounded-3xl py-[10px] px-[30px] hover:shadow-2xl duration-300 hover:bg-[#11a59bd2] tracking-wide md:text-[15px]"
-          href="https://drive.google.com/file/d/18e6hubZlyCTzOTBru9qrlCKVJlO4uIiu/view?usp=drive_link"
-          target="_blank"
-        >
-          Download CV
-        </a>
+        <Magnet padding={40} disabled={false}>
+          <a
+            className="bg-[#11A59B] text-white font-semibold text-[11px] rounded-3xl py-[10px] px-[30px] hover:shadow-2xl duration-300 hover:bg-[#11a59bd2] tracking-wide md:text-[15px]"
+            href="https://drive.google.com/file/d/18e6hubZlyCTzOTBru9qrlCKVJlO4uIiu/view?usp=drive_link"
+            target="_blank"
+          >
+            Download CV
+          </a>
+        </Magnet>
         <div className="lg:hidden">
           {bar ? (
             <FaBars

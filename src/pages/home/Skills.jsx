@@ -1,18 +1,24 @@
+import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import next from "../../../public/nextjs.png"
+
 gsap.registerPlugin(ScrollTrigger);
-import React, { useEffect, useRef, useState } from 'react'
 
 const skillsData = {
   Frontend: [
     { name: "HTML", img: "https://i.ibb.co/HPwNMnc/html-5132b1f6.png" },
     { name: "CSS", img: "https://i.ibb.co/Ch52yML/css-7c2f7af3.png" },
     { name: "JavaScript", img: "https://i.ibb.co/SvHdfrH/js-6b71920c.png" },
-    { name: "React", img: "https://i.ibb.co/X3rPmcR/react-462ddb5a.png" },
     {
       name: "Tailwind CSS",
       img: "https://i.ibb.co/Y3Cz4Cx/tailwind-0ab529d8.png",
+    },
+    { name: "React.js", img: "https://i.ibb.co/X3rPmcR/react-462ddb5a.png" },
+    {
+      name: "Next.js",
+      img: next,
     },
   ],
   Backend: [
@@ -76,7 +82,7 @@ const Skills = () => {
         {/* right */}
         <div className=" flex flex-col md:flex-row gap-10 md:gap-0">
           {/* button */}
-          <div className="flex items-center justify-between md:flex-col md:gap-10 md:w-[30%] md:items-start md:h-80 md:border-r-2 border-r-gray-400">
+          <div className="flex items-center justify-between md:flex-col md:gap-10 md:w-[30%] md:items-start md:h-80">
             {["Frontend", "Backend", "Database"].map((tab) => (
               <button
                 key={tab}
@@ -92,11 +98,11 @@ const Skills = () => {
             ))}
           </div>
           {/* skill */}
-          <div className="mx-4 flex justify-center flex-wrap gap-5 md:w-[70%]">
+          <div className="mx-auto flex justify-center md:justify-start flex-wrap gap-7 md:w-[70%]">
             {skillsData[activeTab].map((skill, index) => (
               <div
                 key={index}
-                className="text-white size-44 flex flex-col items-center justify-center gap-1.5 hover:shadow-2xs hover:shadow-[#5EF38C] hover:scale-105 duration-300"
+                className="text-white size-44 flex flex-col items-center justify-center gap-10 hover:shadow-2xs hover:shadow-[#5EF38C] hover:scale-105 duration-300"
               >
                 <img src={skill.img} alt={skill.name} className="size-20" />
                 <h3 className="font-semibold text-xl">{skill.name}</h3>

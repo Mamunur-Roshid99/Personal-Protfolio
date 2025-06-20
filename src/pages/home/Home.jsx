@@ -9,7 +9,10 @@ import { FaInstagram } from "react-icons/fa6";
 import photo from "/public/profile1.jpg"
 import gsap from "gsap";
 
+import Particles from "../../../animation/Particles/Particles";
+
 const Home = () => {
+  
 
   const [text] = useTypewriter({
     words: ["Front-End Developer", "React-Js Developer", "Mern-Stack Developer"],
@@ -39,19 +42,28 @@ const Home = () => {
       {/*  */}
       <div
         ref={titleRef}
-        className="container w-[90%] mx-auto pt-52 lg:flex justify-between gap-10 mb-14"
+        className="container w-[90%] mx-auto pt-52 lg:flex justify-between gap-10 mb-14 relative"
       >
+        <div style={{ width: "100%", height: "600px",}} className=" absolute top-0">
+          <Particles
+            particleColors={["#ffffff", "#ffffff"]}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
         {/* overly */}
-        <div className="mt-[-40px] w-[100%] lg:w-[40%] mb-8 lg:hidden flex  justify-center">
+        <div className="mt-[-40px] w-[100%] lg:w-[40%] mb-8 lg:hidden flex justify-center">
           <div>
             <img className="rounded-full md:h-96 h-80" src={photo} alt="img" />
           </div>
         </div>
         {/* left */}
         <div className="w-[100%] lg:w-[40%] flex flex-col gap-4 lg:gap-[20px]">
-          {/* <h5 className="font-medium text-regal-blue mb-[-10px]">
-            Hey There 👋 I am
-          </h5> */}
           <h2 className="text">Mamunur Roshid</h2>
           <p className="text-[18px] lg:text-2xl font-medium text-[#FFFFFF]">
             I am <span className="text-[#42DC97]">{text}</span>
@@ -96,7 +108,7 @@ const Home = () => {
           </div>
         </div>
         {/* right */}
-        <div className="mt-[-40px] w-[100%] lg:w-[40%] hidden lg:block justify-center">
+        <div className="mt-[-40px] w-[100%] lg:w-[40%] hidden lg:flex items-center justify-center">
           <div>
             <img className="rounded-full h-96" src={photo} alt="img" />
           </div>

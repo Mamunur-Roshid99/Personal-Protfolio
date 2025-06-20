@@ -9,7 +9,17 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectCard = ({ id, title, imageUrl, description, index }) => {
+import project1 from "../../../public/project1.png"
+import project2 from "../../../public/project2.png";
+import project3 from "../../../public/project3.png";
+import project5 from "../../../public/project5.png";
+
+import details1 from "../../../public/details1.png"
+import details2 from "../../../public/details2.png";
+import details3 from "../../../public/details3.png";
+import details5 from "../../../public/details5.png";
+
+const ProjectCard = ({ id, title, imageUrl, description, index, detailsimg }) => {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -37,14 +47,14 @@ const ProjectCard = ({ id, title, imageUrl, description, index }) => {
   return (
     <div
       ref={cardRef}
-      className="image transform transition duration-300 hover:scale-[1.02] hover:shadow-xl rounded-xl overflow-hidden"
+      className="image transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl rounded-sm overflow-hidden lg:rounded-4xl"
     >
       <img
-        className="image__img w-full h-[200px] object-cover"
+        className="image__img w-full h-[200px] object-cover rounded-2xl lg:rounded-4xl"
         src={imageUrl}
         alt={title}
       />
-      <div className="image__overlay image__overlay--primary flex flex-col gap-4 p-4 bg-[#000000a6] backdrop-blur-md">
+      <div className="image__overlay image__overlay--primary flex flex-col gap-4 p-4 bg-[#000000a6] rounded-2xl lg:rounded-4xl backdrop-blur-md">
         <h3 className="title-color text-white text-xl font-semibold">
           {title}
         </h3>
@@ -54,6 +64,7 @@ const ProjectCard = ({ id, title, imageUrl, description, index }) => {
         <Link
           className="btn myMenu3 ms-0 bg-[#11a59b] text-white py-2 px-4 rounded hover:bg-[#0f8e88] transition"
           to={`/details${id}`}
+          state={{ project: { id, title, imageUrl, description, detailsimg } }}
         >
           Details
         </Link>
@@ -65,39 +76,39 @@ const ProjectCard = ({ id, title, imageUrl, description, index }) => {
 const Projects = () => {
 
 const projects = [
-    {
-      id: 1,
-      title: "Travel Agency Website",
-      imageUrl:
-        "https://i.pinimg.com/736x/eb/7a/6f/eb7a6f571264754a1eecf91c6a32fba1.jpg",
-      description:
-        "This was a project I did for a travel agency. I used HTML CSS to create a responsive website.",
-    },
-    {
-      id: 2,
-      title: "Comfea Website",
-      imageUrl:
-        "https://i.pinimg.com/736x/23/93/6b/23936b845fb786059339d48bb3618345.jpg",
-      description:
-        "This was a project I did for a Comfea Website. I used HTML CSS and JavaScript to create a responsive website.",
-    },
-    {
-      id: 3,
-      title: "Nexcent Website",
-      imageUrl:
-        "https://i.pinimg.com/736x/3e/52/58/3e52585767cc17da215c557c17e5d0d5.jpg",
-      description:
-        "This was a project I did for a Nexcent Website. I used HTML, Tailwind CSS, JavaScript and React to create a responsive website.",
-    },
-    {
+  {
+    id: 1,
+    title: "Admin Dashboard",
+    imageUrl: project1,
+    description:
+      "This was a project I did for a Admin Dashboard. I used React.js & Tailwind CSS to create a responsive website.",
+    detailsimg: details1,
+  },
+  {
+    id: 2,
+    title: "Car Website",
+    imageUrl: project2,
+    description:
+      "This was a project I did for a Car Website. I used Next.js & Tailwind CSS to create a responsive website.",
+    detailsimg: details2,
+  },
+  {
+    id: 3,
+    title: "Furniro Website",
+    imageUrl: project3,
+    description:
+      "This was a project I did for a Furniro Website. I used React.js & Tailwind CSS to create a responsive website.",
+    detailsimg: details3,
+  },
+  {
       id: 4,
-      title: "News Website",
-      imageUrl:
-        "https://i.pinimg.com/736x/59/36/79/59367941f4d27899f520871e569adf78.jpg",
+      title: "Intro Card Website",
+      imageUrl: project5,
       description:
-        "This was a project I did for a News Website. I used HTML, Tailwind CSS and React.js to create a responsive website.",
+        "This was a project I did for a Intro Card Website. I used HTML, CSS to create a responsive website.",
+      detailsimg: details5,
     },
-  ]
+];
 
   const titleRef = useRef(null);
 
@@ -135,7 +146,7 @@ const projects = [
           </p>
         </div>
         {/* upper */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full lg:gap-14 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full lg:gap-4 gap-10">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
