@@ -7,7 +7,7 @@ import profile from "../../../../public/assets/profile.png"
 
 const HeroSection = () => {
   return (
-    <section className="py-12">
+    <section id="home" className="py-12">
       <div className="flex items-center justify-center text-center px-4 md:px-6 lg:px-12">
         <div className="flex flex-col items-center justify-center">
           {/* top */}
@@ -23,7 +23,7 @@ const HeroSection = () => {
               Hi! I’m Mamunur Roshid Anas 👋🏻
             </h4>
           </div>
-          <h1 className="text-3xl lg:text-[60px] lg:max-w-5xl">
+          <h1 className="text-3xl lg:text-[60px] lg:max-w-5xl text-[#242424]">
             Mern Stack Developer crafting modern web experiences.
           </h1>
           <p className="max-w-2xl mx-auto text-sm md:text-base">
