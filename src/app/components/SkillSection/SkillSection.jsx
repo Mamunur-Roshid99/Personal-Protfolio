@@ -1,6 +1,9 @@
 "use client"
 
 import React, { useState } from 'react'
+import Image from 'next/image';
+
+import next from "../../../../public/assets/nextjs.png"
 
 const skillsData = {
   Frontend: [
@@ -14,6 +17,7 @@ const skillsData = {
     { name: "React.js", img: "https://i.ibb.co/X3rPmcR/react-462ddb5a.png" },
     {
       name: "Next.js",
+      img: next,
     },
   ],
   Backend: [
@@ -53,7 +57,7 @@ const SkillSection = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`font-semibold text-[10px] rounded-3xl py-[10px] px-[30px] lg:size-72 tracking-wide md:text-[25px] transition-all duration-200 capitalize ${
+                  className={`font-semibold text-xs rounded-3xl py-[10px] px-[25px] md:px-[30px] lg:size-72 tracking-wide md:text-[25px] transition-all duration-200 capitalize ${
                     activeTab === tab
                       ? "bg-[#000000] text-white hover:shadow-2xl duration-300 hover:bg-[#000000d2]"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
@@ -70,7 +74,12 @@ const SkillSection = () => {
                   key={index}
                   className="text-[#242424] size-44 flex flex-col items-center justify-center gap-5 skill_card duration-300 transition-all border border-[#D8D8D8] rounded-lg"
                 >
-                  <img src={skill.img} alt={skill.name} className="size-16" />
+                  <Image
+                    src={skill.img}
+                    alt={skill.name}
+                    width={64}
+                    height={64}
+                  />
                   <h3 className="font-semibold text-xl">{skill.name}</h3>
                 </div>
               ))}
