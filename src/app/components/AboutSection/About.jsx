@@ -1,0 +1,116 @@
+import Image from "next/image";
+
+import image from "../../../../public/assets/profile2.jpg";
+
+import { FaCode } from "react-icons/fa6";
+import { MdOutlineCastForEducation } from "react-icons/md";
+import { GrProjects } from "react-icons/gr";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
+export const infoList = [
+  {
+    icon: <FaCode />,
+    iconDark: "dfsasdfas",
+    title: "Languages",
+    description: "JavaScript, React.Js, Next.Js, Node.Js",
+  },
+  {
+    icon: <MdOutlineCastForEducation />,
+    iconDark: "fdsfasdfa_dark",
+    title: "Education",
+    description: "Diploma Engineering (CSE)",
+  },
+  {
+    icon: <GrProjects />,
+    iconDark: "fdsfasdfaicon_dark",
+    title: "Projects",
+    description: "Built more than 5 projects",
+  },
+];
+
+const About = () => {
+  return (
+    <section id="about" className="scroll-mt-20 py-10">
+      <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
+        <div className="space-y-10">
+          {/* top */}
+          <h4 className="text-3xl lg:text-5xl text-[#242424] text-center font_outfit">
+            About me
+          </h4>
+          {/* bottom */}
+          <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+            {/* left:image */}
+            <div className="md:w-64 lg:w-96 rounded-3xl max-w-none w-full">
+              <Image src={image} className="w-full rounded-3xl md:h-full" />
+            </div>
+            {/* right */}
+            <div>
+              <p className="text-[#565656] max-w-2xl mb-8">
+                I am an experienced Frontend Developer with over a decade of
+                professional expertise in the field. Throughout my career, I
+                have had the privilege of collaborating with prestigious
+                organizations, contributing to their success and growth.
+              </p>
+              <ul className="grid grid-cols-2 gap-5 md:grid-cols-3">
+                {infoList.map((info, index) => (
+                  <li
+                    key={index}
+                    className="border border-[#D8D8D8] py-7 px-5 rounded-lg transition-all duration-300 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.8)] hover:-translate-y-1"
+                  >
+                    <h5 className="text-[#49516B] text-2xl mb-3">
+                      {info.icon}
+                    </h5>
+                    <h3 className="text-[#494949] font_outfit font-medium text-xl mb-2">
+                      {info.title}
+                    </h3>
+                    <p className="text-[#797979] font_outfit text-sm">
+                      {info.description}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8">
+                <h1 className="text-[#868686] text-sm mb-2">Connect with me</h1>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://www.facebook.com/mamunur.roshid.655427"
+                    target="_blank"
+                    className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                  >
+                    <FaFacebookSquare className="text-[#1877F2] text-2xl" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/mamunur_roshid12/"
+                    target="_blank"
+                    className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                  >
+                    <FaInstagram className="text-[#E4405F] text-2xl" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/mamunur-roshid99/"
+                    target="_blank"
+                    className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                  >
+                    <FaLinkedin className="text-[#0A66C2] text-2xl" />
+                  </a>
+                  <a
+                    href="https://github.com/Mamunur-Roshid99"
+                    target="_blank"
+                    className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                  >
+                    <FaGithub className="text-[#181717] text-2xl" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
