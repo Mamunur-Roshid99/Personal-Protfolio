@@ -14,6 +14,10 @@ const skillsData = {
       name: "Tailwind CSS",
       img: "https://i.ibb.co/Y3Cz4Cx/tailwind-0ab529d8.png",
     },
+    {
+      name: "Bootstrap",
+      img: "https://i.ibb.co/x8kN08J/bootstrap-ff4ba441ec3324145fde.png",
+    },
     { name: "React.js", img: "https://i.ibb.co/X3rPmcR/react-462ddb5a.png" },
     {
       name: "Next.js",
@@ -39,10 +43,9 @@ const skillsData = {
 };
 
 const SkillSection = () => {
-
       const [activeTab, setActiveTab] = useState("Frontend");
   return (
-    <section className="py-14">
+    <section id='skill' className="py-14 scroll-mt-20">
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
           {/* top */}

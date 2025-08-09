@@ -7,7 +7,7 @@ import profile from "../../../../public/assets/profile.png"
 
 const HeroSection = () => {
   return (
-    <section id="home" className="py-12">
+    <section id="home" className="py-12 pt-24 lg:pt-32 scroll-mt-20">
       <div className="flex items-center justify-center text-center px-4 md:px-6 lg:px-12">
         <div className="flex flex-col items-center justify-center">
           {/* top */}

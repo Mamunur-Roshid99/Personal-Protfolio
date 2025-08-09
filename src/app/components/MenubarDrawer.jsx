@@ -42,6 +42,7 @@ export default function MenubarDrawer() {
           <li>
             <a
               href="#home"
+              onClick={() => setOpen(false)}
               className="hover:text-blue-600 transition-colors duration-300"
             >
               Home
@@ -50,6 +51,7 @@ export default function MenubarDrawer() {
           <li>
             <a
               href="#about"
+              onClick={() => setOpen(false)}
               className="hover:text-blue-600 transition-colors duration-300"
             >
               About me
@@ -58,6 +60,7 @@ export default function MenubarDrawer() {
           <li>
             <a
               href="#skill"
+              onClick={() => setOpen(false)}
               className="hover:text-blue-600 transition-colors duration-300"
             >
               Skills
@@ -66,6 +69,7 @@ export default function MenubarDrawer() {
           <li>
             <a
               href="#work"
+              onClick={() => setOpen(false)}
               className="hover:text-blue-600 transition-colors duration-300"
             >
               My work
@@ -74,6 +78,7 @@ export default function MenubarDrawer() {
           <li>
             <a
               href="#contact"
+              onClick={() => setOpen(false)}
               className="hover:text-blue-600 transition-colors duration-300"
             >
               Contact Me
