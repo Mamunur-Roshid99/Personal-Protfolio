@@ -12,3 +12,8 @@ body {
 .font_outfit {
     font-family: var(--font-outfit);
 }
+
+.skill_card:hover {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0.25rem);
+}

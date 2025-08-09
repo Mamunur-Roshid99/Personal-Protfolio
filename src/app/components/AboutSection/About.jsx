@@ -58,7 +58,7 @@ const About = () => {
                 {infoList.map((info, index) => (
                   <li
                     key={index}
-                    className="border border-[#D8D8D8] py-7 px-5 rounded-lg transition-all duration-300 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.8)] hover:-translate-y-1"
+                    className="border border-[#D8D8D8] py-7 px-5 rounded-lg transition-all duration-300 skill_card"
                   >
                     <h5 className="text-[#49516B] text-2xl mb-3">
                       {info.icon}
