@@ -46,7 +46,7 @@ const ContactSection = () => {
                 name="name"
                 required
                 className="flex-1 p-3 outline-none border-[0.5px] border-gray-400
-rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit"
+rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit dark:text-text"
               />
               <input
                 type="email"
@@ -54,7 +54,7 @@ rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit"
                 name="email"
                 required
                 className="flex-1 p-3 outline-none border-[0.5px] border-gray-400
-rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit"
+rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit dark:text-text"
               />
             </div>
             <textarea
@@ -63,7 +63,7 @@ rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit"
               name="message"
               required
               className="w-full p-4 outline-none border-[0.5px] border-[#A4A4A4]
-rounded-md dark:bg-background5 mb-6 placeholder:text-[#B3B3B3] font_outfit"
+rounded-md dark:bg-background5 mb-6 placeholder:text-[#B3B3B3] font_outfit dark:text-text"
             ></textarea>
             <button
               type="submit"
@@ -71,7 +71,7 @@ rounded-md dark:bg-background5 mb-6 placeholder:text-[#B3B3B3] font_outfit"
             >
               Submit now
             </button>
-            <p className="mt-4">{result}</p>
+            <p className="mt-4 dark:text-text">{result}</p>
           </form>
         </div>
       </div>
