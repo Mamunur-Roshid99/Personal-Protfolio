@@ -108,7 +108,7 @@ const Navbar = () => {
                 {isDark ? <FaRegSun /> : <CiDark />}
               </div>
               {/* menu */}
-              <div className="text-xl lg:hidden">
+              <div className="text-xl lg:hidden dark:text-text">
                 <MenubarDrawer />
               </div>
               {/* contact button */}

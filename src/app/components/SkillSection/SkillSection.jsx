@@ -49,7 +49,7 @@ const SkillSection = () => {
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
           {/* top */}
-          <h4 className="text-3xl lg:text-5xl text-[#242424] text-center font_outfit">
+          <h4 className="text-3xl lg:text-5xl dark:text-text text-center font_outfit">
             Skills & Familiarity
           </h4>
           {/* bottom */}
@@ -75,7 +75,7 @@ const SkillSection = () => {
               {skillsData[activeTab].map((skill, index) => (
                 <div
                   key={index}
-                  className="text-[#242424] size-44 flex flex-col items-center justify-center gap-5 skill_card duration-300 transition-all border border-[#D8D8D8] rounded-lg"
+                  className="dark:text-text size-44 flex flex-col items-center justify-center gap-5 skill_card duration-300 transition-all border border-[#D8D8D8] rounded-lg"
                 >
                   <Image
                     src={skill.img}

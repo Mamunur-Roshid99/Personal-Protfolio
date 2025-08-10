@@ -37,7 +37,7 @@ const About = () => {
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
           {/* top */}
-          <h4 className="text-3xl lg:text-5xl text-[#242424] text-center font_outfit">
+          <h4 className="text-3xl lg:text-5xl text-center font_outfit dark:text-text">
             About me
           </h4>
           {/* bottom */}
@@ -48,7 +48,7 @@ const About = () => {
             </div>
             {/* right */}
             <div>
-              <p className="text-[#565656] max-w-2xl mb-8">
+              <p className="max-w-2xl mb-8 dark:text-text4">
                 I am an experienced Frontend Developer with over a decade of
                 professional expertise in the field. Throughout my career, I
                 have had the privilege of collaborating with prestigious
@@ -60,46 +60,46 @@ const About = () => {
                     key={index}
                     className="border border-[#D8D8D8] py-7 px-5 rounded-lg transition-all duration-300 skill_card"
                   >
-                    <h5 className="text-[#49516B] text-2xl mb-3">
+                    <h5 className="dark:text-text5 text-2xl mb-3">
                       {info.icon}
                     </h5>
-                    <h3 className="text-[#494949] font_outfit font-medium text-xl mb-2">
+                    <h3 className="dark:text-text font_outfit font-medium text-xl mb-2">
                       {info.title}
                     </h3>
-                    <p className="text-[#797979] font_outfit text-sm">
+                    <p className="font_outfit text-sm dark:text-text4">
                       {info.description}
                     </p>
                   </li>
                 ))}
               </ul>
               <div className="mt-8">
-                <h1 className="text-[#868686] text-sm mb-2">Connect with me</h1>
+                <h1 className="dark:text-text4 text-sm mb-2">Connect with me</h1>
                 <div className="flex items-center gap-3">
                   <a
                     href="https://www.facebook.com/mamunur.roshid.655427"
                     target="_blank"
-                    className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                    className="border border-[#848484] p-2 rounded-lg cursor-pointer bg-white"
                   >
                     <FaFacebookSquare className="text-[#1877F2] text-2xl" />
                   </a>
                   <a
                     href="https://www.instagram.com/mamunur_roshid12/"
                     target="_blank"
-                    className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                    className="border border-[#848484] p-2 rounded-lg cursor-pointer bg-white"
                   >
                     <FaInstagram className="text-[#E4405F] text-2xl" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/mamunur-roshid99/"
                     target="_blank"
-                    className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                    className="border border-[#848484] p-2 rounded-lg cursor-pointer bg-white"
                   >
                     <FaLinkedin className="text-[#0A66C2] text-2xl" />
                   </a>
                   <a
                     href="https://github.com/Mamunur-Roshid99"
                     target="_blank"
-                    className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                    className="border border-[#848484] p-2 rounded-lg cursor-pointer bg-white"
                   >
                     <FaGithub className="text-[#181717] text-2xl" />
                   </a>

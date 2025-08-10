@@ -79,7 +79,7 @@ const MyWorkSection = () => {
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
           {/* Title */}
-          <h4 className="text-3xl lg:text-5xl text-[#242424] text-center font_outfit">
+          <h4 className="text-3xl lg:text-5xl dark:text-text text-center font_outfit">
             My latest work
           </h4>
 
@@ -155,7 +155,7 @@ const MyWorkSection = () => {
             <div className="flex justify-center mt-10">
               <div
                 onClick={handleShowMore}
-                className="border border-[#A7A7A7] px-6 py-2 rounded-full flex items-center gap-2 text-[#4D4D4D] cursor-pointer font_outfit hover:scale-105 duration-500"
+                className="border border-[#A7A7A7] px-6 py-2 rounded-full flex items-center gap-2 dark:text-text3 cursor-pointer font_outfit hover:scale-105 duration-500"
               >
                 <p>Show more</p>
                 <MdArrowRightAlt className="text-lg" />

@@ -26,7 +26,7 @@ const HeroSection = () => {
           <h1 className="text-3xl lg:text-[60px] lg:max-w-5xl dark:text-text">
             Mern Stack Developer crafting modern web experiences.
           </h1>
-          <p className="max-w-2xl mx-auto text-sm md:text-base dark:text-text">
+          <p className="max-w-2xl mx-auto text-sm md:text-base dark:text-text4">
             I am a Junior Front End Developer, passionate about creating
             stunning web applications using JavaScript, React and Next.js, eager
             to collaborate and innovate together.

@@ -14,7 +14,7 @@ const Footer = () => {
           {/* top */}
           <div className="text-center border-b border-b-[#969696] pb-5">
             {/* logo */}
-            <div className="flex text-2xl lg:text-4xl text-[#1E1E1E] font_outfit font-semibold w-36 mx-auto mb-2 items-center justify-center">
+            <div className="flex text-2xl lg:text-4xl dark:text-text2 font_outfit font-semibold w-36 mx-auto mb-2 items-center justify-center">
               <h5>Mamun</h5>
               <span className="text-[#EC1552]">.</span>
             </div>
@@ -33,28 +33,28 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/mamunur.roshid.655427"
                 target="_blank"
-                className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                className="border border-[#848484] p-2 rounded-lg cursor-pointer bg-white"
               >
                 <FaFacebookSquare className="text-[#1877F2] text-2xl" />
               </a>
               <a
                 href="https://www.instagram.com/mamunur_roshid12/"
                 target="_blank"
-                className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                className="border border-[#848484] p-2 rounded-lg cursor-pointer bg-white"
               >
                 <FaInstagram className="text-[#E4405F] text-2xl" />
               </a>
               <a
                 href="https://www.linkedin.com/in/mamunur-roshid99/"
                 target="_blank"
-                className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                className="border border-[#848484] p-2 rounded-lg cursor-pointer bg-white"
               >
                 <FaLinkedin className="text-[#0A66C2] text-2xl" />
               </a>
               <a
                 href="https://github.com/Mamunur-Roshid99"
                 target="_blank"
-                className="border border-[#848484] p-2 rounded-lg cursor-pointer"
+                className="border border-[#848484] p-2 rounded-lg cursor-pointer bg-white"
               >
                 <FaGithub className="text-[#181717] text-2xl" />
               </a>
