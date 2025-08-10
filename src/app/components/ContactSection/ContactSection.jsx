@@ -4,7 +4,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className='w-full py-10 scroll-mt-20 bg-[url("/assets/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto]'
+      className='w-full py-10 scroll-mt-20'
     >
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
