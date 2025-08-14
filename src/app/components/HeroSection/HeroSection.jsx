@@ -39,7 +39,7 @@ const HeroSection = () => {
               Connect With Me <GoArrowRight />
             </a>
             <a
-              href="https://drive.google.com/file/d/16cDrypI3mcVuIZzeeSABuVtsDFrdjeIz/view?usp=sharing"
+              href="https://drive.google.com/file/d/1pfJawTVYOCcYSeEClAubmC1Onq6GRhh2/view?usp=sharing"
               target="_blank"
               className="px-10 py-3 border border-[#A7A7A7] rounded-full flex items-center gap-2 dark:bg-background4"
             >
