@@ -1,18 +1,20 @@
-"use client"
+"use client";
 
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { MdArrowRightAlt } from "react-icons/md";
-
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import porject1 from "../../../../public/assets/project1.png";
 import porject2 from "../../../../public/assets/project2.png";
 import porject3 from "../../../../public/assets/project3.png";
 import porject4 from "../../../../public/assets/project4.png";
 import porject5 from "../../../../public/assets/porject5.png";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -74,8 +76,25 @@ const MyWorkSection = () => {
     setVisibleCount(projects.length);
   };
 
+  useEffect(() => {
+    const cards = gsap.utils.toArray(".project_card");
+
+    cards.forEach((card) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 90%",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+    });
+  }, [visibleCount]);
+
   return (
-    <section id="work" className="py-14 scroll-mt-20">
+    <section id="mywork" className="py-14 scroll-mt-20">
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
           {/* Title */}
@@ -85,11 +104,10 @@ const MyWorkSection = () => {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.slice(0, visibleCount).map((project, index) => (
+            {projects.slice(0, visibleCount).map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform overflow-hidden animate-fade-in-up"
-                style={{ animationDelay: `${index * 150}ms` }}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform overflow-hidden project_card hover:scale-105"
               >
                 {/* Project Image */}
                 <div className="relative overflow-hidden h-52 group">

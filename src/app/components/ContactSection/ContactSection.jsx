@@ -1,16 +1,34 @@
-"use client"
+"use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ContactSection = () => {
-
   const [result, setResult] = useState("");
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (sectionRef.current) {
+      gsap.from(sectionRef.current, {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 90%",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power2.out",
+      });
+    }
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-
     formData.append("access_key", "21f3f6ef-085e-44f6-81b1-183d13e917ad");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -30,7 +48,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="w-full py-10 scroll-mt-20">
+    <section
+      ref={sectionRef}
+      id="contact"
+      className="w-full py-10 scroll-mt-20"
+    >
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
           {/* top */}
@@ -45,16 +67,14 @@ const ContactSection = () => {
                 placeholder="Enter your name"
                 name="name"
                 required
-                className="flex-1 p-3 outline-none border-[0.5px] border-gray-400
-rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit dark:text-text"
+                className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit dark:text-text"
               />
               <input
                 type="email"
                 placeholder="Enter your email"
                 name="email"
                 required
-                className="flex-1 p-3 outline-none border-[0.5px] border-gray-400
-rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit dark:text-text"
+                className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit dark:text-text"
               />
             </div>
             <textarea
@@ -62,8 +82,7 @@ rounded-md dark:bg-background5 placeholder:text-[#B3B3B3] font_outfit dark:text-
               placeholder="Enter your message"
               name="message"
               required
-              className="w-full p-4 outline-none border-[0.5px] border-[#A4A4A4]
-rounded-md dark:bg-background5 mb-6 placeholder:text-[#B3B3B3] font_outfit dark:text-text"
+              className="w-full p-4 outline-none border-[0.5px] border-[#A4A4A4] rounded-md dark:bg-background5 mb-6 placeholder:text-[#B3B3B3] font_outfit dark:text-text"
             ></textarea>
             <button
               type="submit"
