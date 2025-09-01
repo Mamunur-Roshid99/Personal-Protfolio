@@ -14,7 +14,7 @@ const HeroSection = () => {
   const heroRef = useRef(null);
 
   const [text] = useTypewriter({
-    words: ["Mern Stack Developer.", "React-Js Developer.", "Next-Js Developer"],
+    words: ["Mern Stack Developer", "React-Js Developer", "Next-Js Developer"],
     loop: {},
   });
 
