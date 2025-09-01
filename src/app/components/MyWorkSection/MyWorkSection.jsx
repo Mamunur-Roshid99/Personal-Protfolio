@@ -87,7 +87,7 @@ const MyWorkSection = () => {
         },
         opacity: 0,
         y: 50,
-        duration: 0.8,
+        duration: 0.4,
         ease: "power2.out",
       });
     });
