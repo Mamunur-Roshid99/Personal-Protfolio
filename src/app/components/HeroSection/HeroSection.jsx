@@ -1,17 +1,22 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 
 import { GoArrowRight } from "react-icons/go";
 import { FiDownload } from "react-icons/fi";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-import profile from "../../../../public/assets/profile.png"
+import profile from "../../../../public/assets/profile.png";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const HeroSection = () => {
-  
   const heroRef = useRef(null);
+
+  const [text] = useTypewriter({
+    words: ["Mern Stack Developer.", "React-Js Developer.", "Next-Js Developer"],
+    loop: {},
+  });
 
   useEffect(() => {
     const elements = heroRef.current.children[0].children[0].children;
@@ -65,7 +70,13 @@ const HeroSection = () => {
             </h4>
           </div>
           <h1 className="text-3xl lg:text-[60px] lg:max-w-5xl dark:text-text">
-            Mern Stack Developer crafting modern web experiences.
+            <span>
+              {" "}
+              {text}
+            </span>
+            <span className="font-semibold text-blue-100">
+              <Cursor></Cursor>
+            </span>{" "}
           </h1>
           <p className="max-w-2xl mx-auto text-sm md:text-base dark:text-text4">
             I am a Junior Front End Developer, passionate about creating
