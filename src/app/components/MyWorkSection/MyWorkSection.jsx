@@ -94,7 +94,7 @@ const MyWorkSection = () => {
   }, [visibleCount]);
 
   return (
-    <section id="mywork" className="py-14 scroll-mt-20">
+    <section id="work" className="py-14 scroll-mt-20">
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
           {/* Title */}

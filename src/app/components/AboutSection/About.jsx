@@ -87,7 +87,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="aboutme" className="py-10 scroll-mt-20">
+    <section id="about" className="py-10 scroll-mt-20">
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
           {/* top */}
