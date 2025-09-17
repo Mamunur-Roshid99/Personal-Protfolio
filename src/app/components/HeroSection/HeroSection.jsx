@@ -6,7 +6,7 @@ import { GoArrowRight } from "react-icons/go";
 import { FiDownload } from "react-icons/fi";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-import profile from "../../../../public/assets/profile.jpg";
+import profile from "../../../../public/assets/profile.png";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
