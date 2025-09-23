@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: var(--background);
+    --color-background2: var(--background2);
+    --color-background3: var(--background3);
+    --color-background4: var(--background4);
+    --color-background5: var(--background5);
+    --color-text: var(--text);
+    --color-text2: var(--text2);
+    --color-text3: var(--text3);
+    --color-text4: var(--text4);
+    --color-text5: var(--text5);
+}
+
+:root {
+    --background: #FFFFFF;
+    --background2: #ffffff80;
+    --background3: #000000;
+    --background4: #ffffff;
+    --background5: #ffffff;
+    --text: #242424;
+    --text2: #1E1E1E;
+    --text3: #4D4D4D;
+    --text4: #565656;
+    --text5: #49516B;
+}
+
+.dark {
+    --background: #11031F;
+    --background2: #11031F;
+    --background3: #11031F;
+    --background4: #ffffff;
+    --background5: #170429;
+    --text: white;
+    --text2: #ffffffe3;
+    --text3: #ffffffe3;
+    --text4: #ffffffbf;
+    --text5: #ffffffbf;
+}
+
+body {
+    background: var(--background);
+    font-family: var(--font-ovo);
+}
+
+.font_outfit {
+    font-family: var(--font-outfit);
+}
+
+.skill_card:hover {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+    transform: translateY(-0.25rem);
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation-name: fade-in-up;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
