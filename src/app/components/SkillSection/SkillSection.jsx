@@ -62,7 +62,7 @@ const SkillSection = () => {
                   onClick={() => setActiveTab(tab)}
                   className={`font-semibold text-xs rounded-3xl py-[10px] px-[25px] md:px-[30px] lg:size-72 tracking-wide md:text-[25px] capitalize ${
                     activeTab === tab
-                      ? "bg-[#000000] text-white hover:shadow-2xl duration-300 hover:bg-[#000000d2]"
+                      ? "bg-[#000000] text-white hover:shadow-2xl hover:bg-[#000000d2]"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >

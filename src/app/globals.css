@@ -67,7 +67,7 @@ body {
 
 .animate-fade-in-up {
     animation-name: fade-in-up;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
 }
