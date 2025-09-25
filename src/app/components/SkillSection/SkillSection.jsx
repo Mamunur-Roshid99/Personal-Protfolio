@@ -10,6 +10,11 @@ const skillsData = {
     { name: "HTML", img: "https://i.ibb.co/HPwNMnc/html-5132b1f6.png" },
     { name: "CSS", img: "https://i.ibb.co/Ch52yML/css-7c2f7af3.png" },
     { name: "JavaScript", img: "https://i.ibb.co/SvHdfrH/js-6b71920c.png" },
+    { name: "React.js", img: "https://i.ibb.co/X3rPmcR/react-462ddb5a.png" },
+    {
+      name: "Next.js",
+      img: next,
+    },
     {
       name: "Tailwind CSS",
       img: "https://i.ibb.co/Y3Cz4Cx/tailwind-0ab529d8.png",
@@ -17,11 +22,6 @@ const skillsData = {
     {
       name: "Bootstrap",
       img: "https://i.ibb.co/x8kN08J/bootstrap-ff4ba441ec3324145fde.png",
-    },
-    { name: "React.js", img: "https://i.ibb.co/X3rPmcR/react-462ddb5a.png" },
-    {
-      name: "Next.js",
-      img: next,
     },
   ],
   Backend: [

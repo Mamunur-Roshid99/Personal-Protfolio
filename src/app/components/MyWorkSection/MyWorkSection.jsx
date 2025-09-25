@@ -8,64 +8,64 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import porject1 from "../../../../public/assets/project1.png";
-import porject2 from "../../../../public/assets/project2.png";
-import porject3 from "../../../../public/assets/project3.png";
-import porject4 from "../../../../public/assets/project4.png";
-import porject5 from "../../../../public/assets/porject5.png";
-
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
     id: 1,
-    title: "Admin Dashboard",
+    title: "Landing Page",
     description:
-      "This was a project I did for a Admin Dashboard. I used React.js & Tailwind CSS to create a responsive website.",
-    image: porject1,
-    technologies: ["React", "Tailwind CSS"],
-    liveUrl: "https://react-dashboard-six-omega.vercel.app/",
-    githubUrl: "https://github.com/Mamunur-Roshid99/React-Dashboard",
+      "Built a full-stack MERN application where buyers can order services and sellers deliver digital files.Integrated admin authentication, and admin moderation.",
+    image: "/assets/project1.png",
+    technologies: ["Next.js,", "Tailwind CSS"],
+    liveUrl: "https://landing-page-virid-chi-21.vercel.app/landingPage/111",
+    githubUrl: "https://github.com/Mamunur-Roshid99/Landing-Page",
   },
   {
     id: 2,
-    title: "Car Website",
+    title: "Jersey-Addix",
     description:
-      "This was a project I did for a Car Website. I used Next.js & Tailwind CSS to create a responsive website.",
-    image: porject2,
-    technologies: ["Next.js", "Tailwind CSS"],
-    liveUrl: "https://rent-car-website-omega.vercel.app/",
-    githubUrl: "https://github.com/Mamunur-Roshid99/Rent-Car-Website",
+      "Developed an e-commerce web app using React and Firebase Authentication.Features include login/signup, wishlist, cart system, and MongoDB data storage.",
+    image: "/assets/project2.png",
+    technologies: [
+      "React.js,",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    liveUrl: "https://jersey-addix.vercel.app/",
+    githubUrl: "https://github.com/Mamunur-Roshid99/Jersey-Addix-",
   },
   {
     id: 3,
-    title: "Furniro Website",
-    description:
-      "This was a project I did for a Furniro Website. I used React.js & Tailwind CSS to create a responsive website.",
-    image: porject3,
-    technologies: ["React", "Tailwind CSS"],
-    liveUrl: "https://furniro-e-commerce-website-bay.vercel.app/",
-    githubUrl: "https://github.com/Mamunur-Roshid99/Furniro-eCommerce-Website",
-  },
-  {
-    id: 4,
-    title: "Intro Card Website",
-    description:
-      "This was a project I did for a Intro Card Website. I used HTML, CSS to create a responsive website.",
-    image: porject4,
-    technologies: ["HTML", "CSS", "JS"],
-    liveUrl: "https://intro-liard.vercel.app/",
-    githubUrl: "https://github.com/Mamunur-Roshid99/Intro",
-  },
-  {
-    id: 5,
     title: "DigiBhai Website",
     description:
       "This was a project I did for a DigiBhai Website. I used Next.js, Tailwind CSS to create a responsive website.",
-    image: porject5,
+    image: "/assets/porject3.png",
     technologies: ["Next.js", "Tailwind CSS"],
     liveUrl: "https://digibhai.vercel.app/",
     githubUrl: "https://github.com/Mamunur-Roshid99/DigiBhai",
+  },
+  {
+    id: 4,
+    title: "Nest E-Commerce",
+    description:
+      "Developed an e-commerce web app using Next and Firebase Authentication.Features include login/signup, wishlist, cart system, and MongoDB data storage.",
+    image: "/assets/project4.png",
+    technologies: ["Next.js", "Tailwind CSS"],
+    liveUrl: "https://nest-ecommerce-omega.vercel.app/",
+    githubUrl: "https://github.com/Mamunur-Roshid99/Nest-Ecommerce",
+  },
+  {
+    id: 5,
+    title: "Intro Card Website",
+    description:
+      "This was a project I did for a Intro Card Website. I used HTML, CSS to create a responsive website.",
+    image: "/assets/project5.png",
+    technologies: ["HTML", "CSS", "JS"],
+    liveUrl: "https://intro-liard.vercel.app/",
+    githubUrl: "https://github.com/Mamunur-Roshid99/Intro",
   },
 ];
 

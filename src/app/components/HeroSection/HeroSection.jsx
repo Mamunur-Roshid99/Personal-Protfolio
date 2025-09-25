@@ -70,10 +70,7 @@ const HeroSection = () => {
             </h4>
           </div>
           <h1 className="text-3xl lg:text-[60px] lg:max-w-5xl dark:text-text">
-            <span>
-              {" "}
-              {text}
-            </span>
+            <span> {text}</span>
             <span className="font-semibold text-blue-100">
               <Cursor></Cursor>
             </span>{" "}
@@ -91,7 +88,7 @@ const HeroSection = () => {
               Connect With Me <GoArrowRight />
             </a>
             <a
-              href="https://drive.google.com/file/d/1pfJawTVYOCcYSeEClAubmC1Onq6GRhh2/view?usp=sharing"
+              href="https://drive.google.com/file/d/1A1ob17C1zDRahah8hwQWm-mnuWjsvip2/view?usp=sharing"
               target="_blank"
               className="px-10 py-3 border border-[#A7A7A7] rounded-full flex items-center gap-2 dark:bg-background4"
             >
