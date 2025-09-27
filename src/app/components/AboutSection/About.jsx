@@ -13,11 +13,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export const infoList = [
   {
     icon: <FaCode />,
@@ -40,51 +35,6 @@ export const infoList = [
 ];
 
 const About = () => {
-  const imageRef = useRef(null);
-  const socialRef = useRef([]);
-
-  useEffect(() => {
-    // Animate image
-    gsap.from(imageRef.current, {
-      scrollTrigger: {
-        trigger: imageRef.current,
-        start: "top 80%",
-      },
-      opacity: 0,
-      x: -100,
-      duration: 1,
-      ease: "power2.out",
-    });
-
-    // Animate each info card separately
-    const cards = document.querySelectorAll(".skill_card");
-    cards.forEach((card, i) => {
-      gsap.from(card, {
-        scrollTrigger: {
-          trigger: card,
-          start: "top 90%",
-        },
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        delay: i * 0.2, // stagger effect
-        ease: "power2.out",
-      });
-    });
-
-    // Animate social icons
-    gsap.from(socialRef.current, {
-      scrollTrigger: {
-        trigger: socialRef.current[0],
-        start: "top 90%",
-      },
-      opacity: 0,
-      scale: 0.5,
-      stagger: 0.2,
-      duration: 0.8,
-      ease: "back.out(1.7)",
-    });
-  }, []);
 
   return (
     <section id="about" className="py-10 scroll-mt-20">
@@ -99,7 +49,6 @@ const About = () => {
           <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
             {/* left:image */}
             <div
-              ref={imageRef}
               className="md:w-64 lg:w-96 rounded-3xl max-w-none w-full"
             >
               <Image
@@ -146,7 +95,6 @@ const About = () => {
                     (Icon, i) => (
                       <a
                         key={i}
-                        ref={(el) => (socialRef.current[i] = el)}
                         href={
                           i === 0
                             ? "https://www.facebook.com/mamunur.roshid.655427"

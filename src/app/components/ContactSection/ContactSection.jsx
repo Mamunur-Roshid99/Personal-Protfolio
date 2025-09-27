@@ -1,29 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const ContactSection = () => {
   const [result, setResult] = useState("");
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    if (sectionRef.current) {
-      gsap.from(sectionRef.current, {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 90%",
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power2.out",
-      });
-    }
-  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -49,7 +29,6 @@ const ContactSection = () => {
 
   return (
     <section
-      ref={sectionRef}
       id="contact"
       className="w-full py-10 scroll-mt-20"
     >

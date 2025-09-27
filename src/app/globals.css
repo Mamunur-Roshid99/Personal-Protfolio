@@ -26,19 +26,6 @@
     --text5: #49516B;
 }
 
-.dark {
-    --background: #11031F;
-    --background2: #11031F;
-    --background3: #11031F;
-    --background4: #ffffff;
-    --background5: #170429;
-    --text: white;
-    --text2: #ffffffe3;
-    --text3: #ffffffe3;
-    --text4: #ffffffbf;
-    --text5: #ffffffbf;
-}
-
 body {
     background: var(--background);
     font-family: var(--font-ovo);

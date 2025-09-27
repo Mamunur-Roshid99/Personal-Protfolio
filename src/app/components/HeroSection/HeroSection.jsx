@@ -7,51 +7,16 @@ import { FiDownload } from "react-icons/fi";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 import profile from "../../../../public/assets/profile.png";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
 
 const HeroSection = () => {
-  const heroRef = useRef(null);
-
   const [text] = useTypewriter({
     words: ["Mern Stack Developer", "React-Js Developer", "Next-Js Developer"],
     loop: {},
   });
 
-  useEffect(() => {
-    const elements = heroRef.current.children[0].children[0].children;
-
-    // Timeline বানানো
-    const tl = gsap.timeline({ defaults: { duration: 1, ease: "power3.out" } });
-
-    // Profile Image
-    tl.from(elements[0].children[0], { y: -50, opacity: 0, delay: 0.2 });
-
-    // Intro Text
-    tl.from(elements[0].children[1], { y: -20, opacity: 0 }, "-=0.5");
-
-    // Heading
-    tl.from(
-      heroRef.current.querySelector("h1"),
-      { y: 50, opacity: 0 },
-      "-=0.5"
-    );
-
-    // Paragraph
-    tl.from(heroRef.current.querySelector("p"), { y: 30, opacity: 0 }, "-=0.5");
-
-    // Buttons
-    tl.from(
-      heroRef.current.querySelectorAll("a"),
-      { y: 20, opacity: 0, stagger: 0.2 },
-      "-=0.5"
-    );
-  }, []);
-
   return (
     <section
       id="home"
-      ref={heroRef}
       className="py-12 pt-24 lg:pt-32 scroll-mt-20"
     >
       <div className="flex items-center justify-center text-center px-4 md:px-6 lg:px-12">

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react'
-import Image from 'next/image';
+import React, { useState } from "react";
+import Image from "next/image";
 
-import next from "../../../../public/assets/nextjs.png"
+import next from "../../../../public/assets/nextjs.png";
 
 const skillsData = {
   Frontend: [
@@ -43,9 +43,9 @@ const skillsData = {
 };
 
 const SkillSection = () => {
-      const [activeTab, setActiveTab] = useState("Frontend");
+  const [activeTab, setActiveTab] = useState("Frontend");
   return (
-    <section id='skill' className="py-14 scroll-mt-20">
+    <section id="skill" className="py-14 scroll-mt-20">
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="space-y-10">
           {/* top */}
@@ -92,6 +92,6 @@ const SkillSection = () => {
       </div>
     </section>
   );
-}
+};
 
-export default SkillSection
+export default SkillSection;

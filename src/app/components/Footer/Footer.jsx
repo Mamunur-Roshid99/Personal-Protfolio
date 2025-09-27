@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import { MdEmail } from "react-icons/md";
 import {
@@ -12,28 +10,10 @@ import {
   FaGithub,
 } from "react-icons/fa";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Footer = () => {
-  const footerRef = useRef(null);
-
-  useEffect(() => {
-    if (footerRef.current) {
-      gsap.from(footerRef.current, {
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 95%", // scroll e erokom porjonto trigger hobe
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power2.out",
-      });
-    }
-  }, []);
 
   return (
-    <footer ref={footerRef} className="py-5">
+    <footer className="py-5">
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
         <div className="">
           {/* top */}

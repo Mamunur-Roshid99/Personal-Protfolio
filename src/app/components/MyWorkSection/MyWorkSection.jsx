@@ -5,10 +5,6 @@ import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { MdArrowRightAlt } from "react-icons/md";
 import Image from "next/image";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -70,24 +66,6 @@ const projects = [
 ];
 
 const MyWorkSection = () => {
-
-  useEffect(() => {
-    const cards = gsap.utils.toArray(".project_card");
-
-    cards.forEach((card) => {
-      gsap.from(card, {
-        scrollTrigger: {
-          trigger: card,
-          start: "top 90%",
-        },
-        opacity: 0,
-        y: 50,
-        duration: 0.4,
-        ease: "power2.out",
-      });
-    });
-  }, []);
-
   return (
     <section id="work" className="py-14 scroll-mt-20">
       <div className="max-w-7xl px-4 md:px-8 lg:px-16 mx-auto">
