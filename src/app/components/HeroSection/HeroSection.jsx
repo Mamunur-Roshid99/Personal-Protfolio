@@ -41,7 +41,7 @@ const HeroSection = () => {
             </span>{" "}
           </h1>
           <p className="max-w-2xl mx-auto text-sm md:text-base dark:text-text4">
-            I am a Junior Front End Developer, passionate about creating
+            I am a MERN Stack Developer, passionate about creating
             stunning web applications using JavaScript, React and Next.js, eager
             to collaborate and innovate together.
           </p>

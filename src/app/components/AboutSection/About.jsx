@@ -61,7 +61,7 @@ const About = () => {
             {/* right */}
             <div>
               <p className="max-w-2xl mb-8 dark:text-text4">
-                I am an experienced Frontend Developer with over a decade of
+                I am an experienced MERN Stack Developer with over a decade of
                 professional expertise in the field. Throughout my career, I
                 have had the privilege of collaborating with prestigious
                 organizations, contributing to their success and growth.
