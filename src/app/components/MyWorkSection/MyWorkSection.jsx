@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
-import { MdArrowRightAlt } from "react-icons/md";
 import Image from "next/image";
 
 const projects = [
@@ -35,6 +34,16 @@ const projects = [
   },
   {
     id: 3,
+    title: "Mobile Shop",
+    description:
+      "Developed an e-commerce web app using Next and Firebase Authentication.Features include login/signup, wishlist, cart system, and MongoDB data storage.",
+    image: "/assets/project4.png",
+    technologies: ["Next.js", "Tailwind CSS", "Redux Toolkit", "MongoDB"],
+    liveUrl: "https://mobile-shop-omega.vercel.app/",
+    githubUrl: "https://github.com/Mamunur-Roshid99/Mobile-Shop-E-Commerce",
+  },
+  {
+    id: 4,
     title: "DigiBhai Website",
     description:
       "This was a project I did for a DigiBhai Website. I used Next.js, Tailwind CSS to create a responsive website.",
@@ -42,16 +51,6 @@ const projects = [
     technologies: ["Next.js", "Tailwind CSS"],
     liveUrl: "https://digibhai.vercel.app/",
     githubUrl: "https://github.com/Mamunur-Roshid99/DigiBhai",
-  },
-  {
-    id: 4,
-    title: "Nest E-Commerce",
-    description:
-      "Developed an e-commerce web app using Next and Firebase Authentication.Features include login/signup, wishlist, cart system, and MongoDB data storage.",
-    image: "/assets/project4.png",
-    technologies: ["Next.js", "Tailwind CSS"],
-    liveUrl: "https://nest-ecommerce-omega.vercel.app/",
-    githubUrl: "https://github.com/Mamunur-Roshid99/Nest-Ecommerce",
   },
   {
     id: 5,
